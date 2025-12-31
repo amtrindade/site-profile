@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Antônio Trindade | Perfil Profissional</title>
+	<meta name="description" content="Perfil profissional de Antônio Trindade, especialista em automação de testes, qualidade de software e mentor de times ágeis.">  
+	<meta name="author" content="Antônio Trindade">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/base.css">  
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/vendor.css">
+	<style>
+		body { background:#0f1115; color:#e7e7ec; }
+		a, a:visited { color:#7bd8c6; }
+		a:hover, a:focus { color:#ffffff; }
+      header { padding:24px 0; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(32,36,45,0.65); backdrop-filter:blur(8px); position:sticky; top:0; z-index:999; }
+      .logo a { color:#f5f6fa; font-weight:700; letter-spacing:0.12rem; }
+      .main-nav { display:flex; gap:18px; flex-wrap:wrap; align-items:center; justify-content:flex-end; }
+      .main-nav a { font-size:1.4rem; text-transform:uppercase; letter-spacing:0.12rem; color:#d8dee7; }
+      .main-nav a:hover { color:#ffffff; }
+		#home { min-height:82vh; display:flex; align-items:center; position:relative; overflow:hidden; background:radial-gradient(circle at 20% 20%, rgba(123,216,198,0.08), transparent 35%), radial-gradient(circle at 80% 10%, rgba(123,216,198,0.06), transparent 32%), radial-gradient(circle at 50% 80%, rgba(123,216,198,0.09), transparent 38%), #0b0d11; }
+		#home .hero-backdrop { background:linear-gradient(120deg, rgba(9,11,15,0.9), rgba(9,11,15,0.65)); position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+		#home .hero { position:relative; z-index:1; }
+      .hero { max-width:1080px; margin:0 auto; text-align:left; padding:96px 24px 72px; }
+		.hero h1 { color:#ffffff; font-size:4.2rem; margin-bottom:1.6rem; }
+		.hero .tagline { color:#9cb0c3; font-size:1.8rem; margin-bottom:1.6rem; }
+      .badge { display:inline-flex; align-items:center; gap:10px; padding:8px 14px; border-radius:999px; background:rgba(123,216,198,0.12); color:#7bd8c6; font-size:1.3rem; letter-spacing:0.08rem; margin-bottom:18px; }
+		section { padding:88px 0; position:relative; }
+		.section-title { font-size:2.6rem; color:#ffffff; margin-bottom:1.6rem; }
+		.section-lead { color:#9cb0c3; margin-bottom:3.2rem; max-width:880px; }
+		.light-section { background:#f4f6f8; }
+		.light-section .section-title { color:#1a1d23; }
+		.light-section .section-lead { color:#4a5568; }
+		.light-section .chip { background:#e2e8f0; color:#2d3748; }
+		.light-section .media img { border:2px solid rgba(0,0,0,0.08); box-shadow:0 12px 32px rgba(0,0,0,0.12); }
+		.light-section .experience-item { background:#ffffff; border-left:3px solid #48bb9c; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+		.light-section .experience-item h4 { color:#1a1d23; }
+		.light-section .experience-item p { color:#4a5568; }
+		.light-section p { color:#4a5568; }
+		.grid { display:grid; gap:24px; }
+		.two-col { grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); align-items:start; }
+		.three-col { grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
+		.card { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:16px; padding:22px 20px; box-shadow:0 20px 60px rgba(0,0,0,0.25); }
+		.card h3 { color:#ffffff; margin-bottom:0.6rem; font-size:1.9rem; }
+		.chip { display:inline-block; padding:6px 12px; border-radius:999px; background:rgba(255,255,255,0.07); color:#c9d3de; font-size:1.2rem; margin:4px 4px 0 0; }
+		.experience-item { padding:18px 16px; border-left:3px solid #7bd8c6; background:rgba(255,255,255,0.02); border-radius:12px; margin-bottom:16px; }
+		.experience-item h4 { color:#ffffff; margin:0 0 6px; }
+		.experience-meta { color:#7bd8c6; font-size:1.35rem; margin-bottom:8px; }
+		.media { display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap; }
+		.media img { width:220px; max-width:100%; border-radius:16px; border:2px solid rgba(255,255,255,0.08); box-shadow:0 16px 48px rgba(0,0,0,0.35); flex-shrink:0; }
+		.profile-photo { width:280px; max-width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:16px; box-shadow:0 12px 32px rgba(0,0,0,0.12); border:3px solid rgba(0,0,0,0.08); }
+		@media (max-width:768px) { .profile-photo { width:220px; margin:0 auto; display:block; } }
+		.contact-block { display:flex; gap:16px; align-items:center; margin-bottom:12px; color:#c9d3de; }
+		.contact-block i { color:#7bd8c6; }
+		footer { background:#0b0d11; border-top:1px solid rgba(255,255,255,0.05); padding:32px 0; color:#7f8b98; }
+		.social-inline { display:flex; gap:14px; flex-wrap:wrap; }
+		.social-inline a { color:#e7e7ec; padding:10px 12px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.05); }
+		.social-inline a:hover { background:rgba(123,216,198,0.15); color:#0b0d11; }
+		@media (max-width:768px) { .hero h1 { font-size:3.2rem; } header { position:sticky; } }
+	</style>
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row" style="align-items:center; display:flex; justify-content:space-between; gap:18px;">
+	   	<div class="logo" style="display:flex; align-items:center; gap:14px;">
+	         <img src="images/antonio-trindade.jpg" alt="Antônio Trindade" style="width:54px; height:54px; object-fit:cover; border-radius:50%; border:2px solid rgba(255,255,255,0.35); box-shadow:0 8px 24px rgba(0,0,0,0.35);">
+	         <a href="#top">Antônio Trindade</a>
+	      </div>
+	      <nav class="main-nav">
+	         <a class="smoothscroll" href="#quem-sou">Quem sou eu</a>
+	         <a class="smoothscroll" href="#como-atuo">Como atuo</a>
+	         <a class="smoothscroll" href="#experiencias">Experiências</a>
+	         <a class="smoothscroll" href="#contatos">Contatos</a>
+	         <a class="smoothscroll" href="#redes">Redes</a>
+	      </nav>
+   	</div> 
+
+   </header> <!-- /header -->   
+
+   <!-- home / hero -->
+   <section id="home">
+      <div class="hero-backdrop"></div>
+      <div class="hero">
+         <div class="badge">Automação de Testes • Qualidade • Mentoria</div>
+         <h1>Antônio Trindade</h1>
+         <p class="tagline">Especialista em automação de testes e qualidade de software, com foco em formar times, estruturar estratégias de QA e entregar produtos com confiança.</p>
+         <p style="margin:18px 0 0; color:#c9d3de; max-width:780px;">Atuação prática em automação funcional e integrações, desenho de pipelines de qualidade, coaching de equipes e evangelização de cultura de testes. Facilito a transição de times para práticas modernas de QA, com métricas, observabilidade e entrega contínua.</p>
+      </div>
+	  <div class="scroll-icon">
+
+					   <p class="scroll-text">Scroll para mais informações</p>
+					   <a href="#styles" class="smoothscroll">
+					   	<div class="mouse"></div>
+					   </a>
+				   	<div class="end-top"></div>
+
+		</div> <!-- /scroll-icon -->
+   </section>
+
+   <!-- Quem sou eu -->
+   <section id="quem-sou" class="light-section">
+      <div class="row">
+         <div class="col-twelve">
+            <h2 class="section-title">Quem sou eu</h2>
+            <p class="section-lead">Profissional dedicado a elevar a qualidade de software por meio de automação, processos claros e colaboração. Sou movido por aprendizado contínuo, compartilhamento e pela construção de times que confiam no que entregam.</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-five tab-full">
+            <img src="images/antonio-trindade.jpg" alt="Foto de Antônio Trindade" class="profile-photo" />
+         </div>
+         <div class="col-seven tab-full">
+            <p style="margin-bottom:14px;">Minha trajetória combina experiência prática em QA, automação e liderança técnica. Gosto de criar ambientes onde qualidade é responsabilidade de todos, com experimentação rápida e feedback constante.</p>
+            <div>
+               <span class="chip">Automação Web/API</span>
+               <span class="chip">Pipelines CI/CD</span>
+               <span class="chip">Mentoria de QA</span>
+               <span class="chip">Test Design</span>
+               <span class="chip">Observabilidade</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Como atuo -->
+   <section id="como-atuo">
+      <div class="row">
+         <div class="col-twelve">
+            <h2 class="section-title">Como atuo</h2>
+            <p class="section-lead">Estratégia de qualidade ponta a ponta, alinhada ao negócio e sustentável para o time.</p>
+            <div class="grid three-col">
+               <div class="card">
+                  <h3>Estratégia e Enablement</h3>
+                  <p style="color:#c9d3de;">Defino abordagens de teste, critérios de qualidade e métricas. Treino o time para tornar a qualidade parte do fluxo diário.</p>
+               </div>
+               <div class="card">
+                  <h3>Automação escalável</h3>
+                  <p style="color:#c9d3de;">Crio e evoluo suites de automação (web, APIs, serviços), integradas ao CI/CD e observáveis, priorizando manutenção simples.</p>
+               </div>
+               <div class="card">
+                  <h3>Mentoria e Cultura</h3>
+                  <p style="color:#c9d3de;">Facilito workshops, revisões de qualidade e coaching para que o time assuma ownership da qualidade e do produto.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Experiências profissionais -->
+   <section id="experiencias" class="light-section">
+      <div class="row">
+         <div class="col-twelve">
+            <h2 class="section-title">Experiências profissionais</h2>
+            <p class="section-lead">Principais frentes em que atuei nos últimos anos.</p>
+            <div class="experience-item">
+               <h4>Especialista em Automação e Qualidade</h4>
+               <div class="experience-meta">Consultoria e times de produto • Web, API, pipelines CI/CD</div>
+               <p>Desenho de estratégia de testes, criação de suites automatizadas, integração com esteiras de entrega, definição de métricas e coaching de squads.</p>
+            </div>
+            <div class="experience-item">
+               <h4>Instrutor e Mentor em QA</h4>
+               <div class="experience-meta">Formação e capacitação de profissionais de testes</div>
+               <p>Workshops práticos sobre automação, boas práticas de qualidade, ferramentas de apoio e mindset de testes contínuos.</p>
+            </div>
+            <div class="experience-item">
+               <h4>Consultor Técnico</h4>
+               <div class="experience-meta">Estruturação de processos de qualidade</div>
+               <p>Avaliação de maturidade, desenho de plano de evolução e implementação de governança de QA alinhada ao negócio.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Contatos -->
+   <section id="contatos">
+      <div class="row">
+         <div class="col-twelve">
+            <h2 class="section-title">Contatos</h2>
+            <p class="section-lead">Vamos conversar sobre como elevar a qualidade do seu produto.</p>
+            <div class="grid two-col">
+               <div>
+                  <div class="contact-block"><i class="fa fa-envelope"></i><span><a href="mailto:amtrindade@gmail.com">amtrindade@gmail.com</a></span></div>
+                  <div class="contact-block"><i class="fa fa-map-marker"></i><span>Remoto (Brasil)</span></div>
+                  <div class="contact-block"><i class="fa fa-linkedin"></i><span><a href="https://www.linkedin.com/in/antoniomoraestrindade" target="_blank" rel="noopener">LinkedIn</a></span></div>
+               </div>
+               <div>
+                  <p style="color:#c9d3de; margin-bottom:10px;">Prefere direto pelas redes? Você me encontra rápido pelo LinkedIn ou pelo e-mail acima.</p>
+                  <p style="color:#c9d3de;">Se já tiver contexto do projeto, compartilhe stack, esteira e principais dores para eu responder de forma objetiva.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Redes sociais -->
+   <section id="redes">
+      <div class="row">
+         <div class="col-twelve">
+            <h2 class="section-title">Redes sociais</h2>
+            <p class="section-lead">Conecte-se comigo e acompanhe o que tenho compartilhado sobre QA e automação.</p>
+            <div class="social-inline">
+               <a href="https://www.linkedin.com/in/antoniomoraestrindade" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i> LinkedIn</a>
+               <a href="https://github.com/amtrindade" target="_blank" rel="noopener"><i class="fa fa-github"></i> GitHub</a>
+               <a href="https://twitter.com/acmtrindade" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> Twitter</a>
+               <a href="https://www.instagram.com/amtrindade" target="_blank" rel="noopener"><i class="fa fa-instagram"></i> Instagram</a>
+               <a href="https://www.facebook.com/antonio.moraestrindade" target="_blank" rel="noopener"><i class="fa fa-facebook"></i> Facebook</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer>
+      <div class="row">
+         <div class="col-twelve" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+            <div>
+               <div>© Antônio Trindade</div>
+               <div style="font-size:1.50rem; color:#6a7c8a;">2026</div>
+            </div>
+            <a class="smoothscroll" href="#top">Voltar ao topo</a>
+         </div>
+      </div>
+   </footer>
+
+   <div id="preloader"> 
+   	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

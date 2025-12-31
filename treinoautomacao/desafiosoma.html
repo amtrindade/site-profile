@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AMTrindade - Treinamento em automação de testes">
+    <meta name="author" content="Antonio Trindade - http://about.me/amtrindade">
+    
+    <title>Desafio Automação Cálculos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+      <div class="masthead">
+        <h3 class="text-muted">Treinamento em Automação de Testes</h3>
+        <ul class="nav nav-justified">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
+          <li class="active"><a href="desafiosoma.html">Calculadora</a></li>
+          <li><a href="localizandovalorestable.html">Localizar Table</a></li>
+          <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
+          <li><a href="elementsweb.html">Web Elementos</a></li>
+        </ul>
+      </div>
+		<div class="row">
+		<br>
+		<ol>
+		  <li>Informe os valores e selecione uma das operações aritméticas: <br />
+			<div style="position: relative; width: 100px; left: 2px; top: 16px; height: 15px;">Valor 1</div>
+			<div style="position: relative; width: 100px; left: 155px;">Valor 2</div>
+			<div style="position: relative; width: 100px; left: 330px; top: -16px; height: 15px;">Total</div>
+
+			<input id="number1" type="text">&nbsp;
+			<input id="number2" type="text">&nbsp;=&nbsp;
+			<input id="total" type="text"> <br />
+			
+			<script type="text/javascript">
+				function clear_campos()
+					{document.getElementById("total").value = '';
+					 document.getElementById("number1").value = '';
+					 document.getElementById("number2").value = '';
+					}
+				function somar_valores()
+				   {document.getElementById("total").value = parseFloat(document.getElementById("number1").value) + parseFloat(document.getElementById("number2").value);}
+				function multiplicar_valores()
+					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) * parseFloat(document.getElementById("number2").value);}
+				function subtrair_valores()
+					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) - parseFloat(document.getElementById("number2").value);}
+				function dividir_valores()
+					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) / parseFloat(document.getElementById("number2").value);}
+			</script>
+			
+			<br>
+				
+				<input id="somar" value="Somar" onclick="setTimeout(somar_valores, 2000);" type="button">&nbsp;&nbsp;&nbsp;
+				<input id="subtrair" value="Subtrair" onclick="subtrair_valores()" type="button">&nbsp;&nbsp;&nbsp;
+				<input id="multiplicar" value="Multiplicar" onclick="multiplicar_valores()" type="button">&nbsp;&nbsp;&nbsp;
+				<input id="dividir" value="Dividir" onclick="dividir_valores()" type="button">&nbsp;&nbsp;&nbsp;
+				<input id="limpar" value="Limpar" onclick="clear_campos()" type="button"> </li>
+				
+			<br>
+		</ol>
+		</div>
+		<!-- Site footer -->
+      <div class="footer">
+        <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
+      </div>
+	</div>
+</body>
+</html>
