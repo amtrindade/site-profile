@@ -13,8 +13,12 @@
 
     <!-- Custom styles for this template -->
     <link href="css/justified-nav.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/layout.css" rel="stylesheet">
+	<link href="css/components.css" rel="stylesheet">
+	<link href="css/pages/desafiosoma.css" rel="stylesheet">
 </head>
-<body>
+<body class="calc-page">
 	<div class="container">
       <div class="masthead">
         <h3 class="text-muted">Treinamento em Automação de Testes</h3>
@@ -27,49 +31,36 @@
           <li><a href="elementsweb.html">Web Elementos</a></li>
         </ul>
       </div>
-		<div class="row">
-		<br>
-		<ol>
-		  <li>Informe os valores e selecione uma das operações aritméticas: <br />
-			<div style="position: relative; width: 100px; left: 2px; top: 16px; height: 15px;">Valor 1</div>
-			<div style="position: relative; width: 100px; left: 155px;">Valor 2</div>
-			<div style="position: relative; width: 100px; left: 330px; top: -16px; height: 15px;">Total</div>
+		<main class="calc-card panel-soft" role="main">
+			<p class="calc-intro">Informe os valores e selecione uma das operações aritméticas:</p>
+			<div class="calc-grid">
+				<div class="calc-field">
+					<label for="number1">Valor 1</label>
+					<input id="number1" type="text">
+				</div>
+				<div class="calc-field">
+					<label for="number2">Valor 2</label>
+					<input id="number2" type="text">
+				</div>
+				<div class="calc-field">
+					<label for="total">Total</label>
+					<input id="total" type="text">
+				</div>
+			</div>
 
-			<input id="number1" type="text">&nbsp;
-			<input id="number2" type="text">&nbsp;=&nbsp;
-			<input id="total" type="text"> <br />
-			
-			<script type="text/javascript">
-				function clear_campos()
-					{document.getElementById("total").value = '';
-					 document.getElementById("number1").value = '';
-					 document.getElementById("number2").value = '';
-					}
-				function somar_valores()
-				   {document.getElementById("total").value = parseFloat(document.getElementById("number1").value) + parseFloat(document.getElementById("number2").value);}
-				function multiplicar_valores()
-					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) * parseFloat(document.getElementById("number2").value);}
-				function subtrair_valores()
-					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) - parseFloat(document.getElementById("number2").value);}
-				function dividir_valores()
-					{document.getElementById("total").value = parseFloat(document.getElementById("number1").value) / parseFloat(document.getElementById("number2").value);}
-			</script>
-			
-			<br>
-				
-				<input id="somar" value="Somar" onclick="setTimeout(somar_valores, 2000);" type="button">&nbsp;&nbsp;&nbsp;
-				<input id="subtrair" value="Subtrair" onclick="subtrair_valores()" type="button">&nbsp;&nbsp;&nbsp;
-				<input id="multiplicar" value="Multiplicar" onclick="multiplicar_valores()" type="button">&nbsp;&nbsp;&nbsp;
-				<input id="dividir" value="Dividir" onclick="dividir_valores()" type="button">&nbsp;&nbsp;&nbsp;
-				<input id="limpar" value="Limpar" onclick="clear_campos()" type="button"> </li>
-				
-			<br>
-		</ol>
-		</div>
+			<div class="calc-actions actions-row">
+				<input id="somar" value="Somar" type="button">
+				<input id="subtrair" value="Subtrair" type="button">
+				<input id="multiplicar" value="Multiplicar" type="button">
+				<input id="dividir" value="Dividir" type="button">
+				<input id="limpar" value="Limpar" type="button">
+			</div>
+		</main>
 		<!-- Site footer -->
       <div class="footer">
         <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
       </div>
 	</div>
+	<script src="js/pages/desafiosoma.js" defer></script>
 </body>
 </html>

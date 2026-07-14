@@ -1,0 +1,35 @@
+.calc-page .calc-card {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.calc-page .calc-intro {
+  margin-bottom: var(--space-5);
+}
+
+.calc-page .calc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.calc-page .calc-field label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+.calc-page .calc-field input {
+  width: 100%;
+}
+
+.calc-page .calc-actions {
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 767px) {
+  .calc-page .calc-grid {
+    grid-template-columns: 1fr;
+  }
+}

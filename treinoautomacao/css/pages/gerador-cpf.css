@@ -1,0 +1,35 @@
+.cpf-panel {
+  max-width: 540px;
+  margin: 40px auto 0;
+  padding: 30px 25px;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cpf-actions {
+  margin-top: 20px;
+}
+
+.cpf-status {
+  min-height: 52px;
+  margin-top: 20px;
+}
+
+.cpf-valido {
+  border-color: #3c763d;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(60, 118, 61, 0.35);
+}
+
+.cpf-invalido {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(169, 68, 66, 0.35);
+}
+
+@media (max-width: 767px) {
+  .cpf-panel {
+    margin-top: 25px;
+    padding: 25px 18px;
+  }
+}

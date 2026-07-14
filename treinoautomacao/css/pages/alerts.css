@@ -1,0 +1,14 @@
+.alerts-page .alerts-card {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.alerts-page .alerts-card form + form {
+  margin-top: var(--space-5);
+}
+
+.alerts-page .alerts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

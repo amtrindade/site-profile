@@ -1,0 +1,231 @@
+{
+  "project": "treinoautomacao",
+  "planFile": "docs/plan.md",
+  "mode": "static-only",
+  "summary": "Execucao do refactor de layout sem etapa de build, mantendo projeto 100% estatico.",
+  "constraints": [
+    "Sem bundler",
+    "Sem transpiler",
+    "Sem task runner",
+    "Sem pipeline de build",
+    "Carregamento direto de arquivos .html, .css e .js",
+    "Preservar reutilizacao de IDs em elementsweb.html por requisito didatico"
+  ],
+  "deliverables": [
+    "docs/plan.md",
+    "docs/tasks.json",
+    "docs/checklist-regressao.md",
+    "docs/guia-estilo.md"
+  ],
+  "tasks": [
+    {
+      "id": "T0",
+      "title": "Baseline e mapeamento",
+      "status": "done",
+      "description": "Mapear seletores criticos, registrar estado atual e criar base de comparacao visual.",
+      "dependsOn": [],
+      "acceptanceCriteria": [
+        "Checklist inicial preenchido",
+        "IDs e classes criticos listados por pagina"
+      ],
+      "notes": [
+        "Baseline inicial documentado em docs/checklist-regressao.md",
+        "Inventario de IDs e classes criticos por pagina registrado"
+      ]
+    },
+    {
+      "id": "T1",
+      "title": "Criar fundacao CSS estatica",
+      "status": "done",
+      "description": "Criar css/base.css, css/layout.css e css/components.css sem build.",
+      "dependsOn": [
+        "T0"
+      ],
+      "acceptanceCriteria": [
+        "Arquivos CSS carregam via link tradicional",
+        "Sem dependencias de preprocessador"
+      ],
+      "notes": [
+        "Arquivos criados: css/base.css, css/layout.css e css/components.css",
+        "Links adicionados em todas as paginas HTML via <link rel=\"stylesheet\">"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Atualizar shell visual da home",
+      "status": "done",
+      "description": "Refatorar index.html com layout moderno mantendo navegacao funcional.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Home responsiva em desktop e mobile",
+        "Nav com estado ativo consistente"
+      ],
+      "notes": [
+        "Home refatorada com estrutura semantica (header/main/footer)",
+        "Layout responsivo aplicado com hero + grid de cards",
+        "Estado ativo da nav mantido com li.active e aria-current=page"
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Separar JS e CSS de desafiosoma",
+      "status": "done",
+      "description": "Mover estilos e scripts inline para arquivos externos e ligar por link/script defer.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Sem style inline",
+        "Sem onclick inline",
+        "Comportamento atual preservado"
+      ],
+      "notes": [
+        "Criados css/pages/desafiosoma.css e js/pages/desafiosoma.js",
+        "Eventos migrados para addEventListener com IDs originais preservados"
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Separar JS e CSS de alertsconfirmation",
+      "status": "done",
+      "description": "Extrair comportamento de alerta/confirmacao para js/pages/alerts.js.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Eventos ligados por addEventListener",
+        "Fluxo de alertas sem regressao"
+      ],
+      "notes": [
+        "Criados css/pages/alerts.css e js/pages/alerts.js",
+        "Acoes de alerta/confirmacao normal e com delay migradas para JS externo"
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Refatorar localizandovalorestable",
+      "status": "done",
+      "description": "Melhorar semantica da tabela e extrair scripts/estilos mantendo fluxo de reserva.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Tabela com markup consistente",
+        "Acao de reserva preservada"
+      ],
+      "notes": [
+        "Criados css/pages/tabela.css e js/pages/tabela.js",
+        "Tabela migrada para thead/tbody e fluxo de reserva preservado com feedback em #minha_div"
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Refatorar utilizandoxpath",
+      "status": "done",
+      "description": "Corrigir estrutura HTML e separar comportamento em JS externo.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Documento sem body duplicado",
+        "Layout responsivo e sem regressao"
+      ],
+      "notes": [
+        "Documento corrigido para um unico body e sem script legado inline",
+        "Criados css/pages/xpath.css e js/pages/xpath.js"
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Refatorar elementsweb com excecao didatica",
+      "status": "done",
+      "description": "Modernizar estrutura e separar inline, mantendo reutilizacao de IDs por requisito do curso.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "IDs reaproveitados preservados",
+        "Sem alterar logica do exercicio",
+        "Demais melhorias aplicadas com cuidado"
+      ],
+      "notes": [
+        "Nao normalizar IDs unicos nesta pagina",
+        "Evitar mudancas que quebrem materiais do curso",
+        "Criados css/pages/elementsweb.css e js/pages/elementsweb.js com IDs reaproveitados preservados"
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Consolidar geradorcpf",
+      "status": "done",
+      "description": "Validar padrao final de separacao e consistencia visual na pagina de CPF.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "CSS e JS externos",
+        "Feedback visual e fluxo atual preservados"
+      ],
+      "notes": [
+        "Migrado inline para css/pages/gerador-cpf.css e js/pages/gerador-cpf.js",
+        "Fluxo de mascara, validacao e geracao com delay preservado"
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Revisao de regressao manual",
+      "status": "done",
+      "description": "Executar checklist-regressao por pagina em desktop e mobile.",
+      "dependsOn": [
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "acceptanceCriteria": [
+        "Checklist preenchido com status por pagina",
+        "Sem regressao funcional critica"
+      ],
+      "notes": [
+        "Smoke desktop/mobile executado em 2026-07-14",
+        "Sem regressao funcional critica detectada nos fluxos principais"
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Fechamento e padronizacao",
+      "status": "done",
+      "description": "Revisar aderencia ao guia de estilo e atualizar docs de manutencao.",
+      "dependsOn": [
+        "T9"
+      ],
+      "acceptanceCriteria": [
+        "Padrao estatico respeitado",
+        "Documentacao pronta para proximas iteracoes"
+      ],
+      "notes": [
+        "Guia de estilo revisado com orientacoes de fechamento",
+        "Documento de manutencao criado: docs/manutencao-refactor.md",
+        "Ciclo T0-T10 finalizado na branch newlayout"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "T0",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10"
+  ]
+}

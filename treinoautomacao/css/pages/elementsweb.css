@@ -1,0 +1,29 @@
+.elements-page .elements-shell {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.elements-page #elementos {
+  margin-top: var(--space-5);
+}
+
+.elements-page .elements-table {
+  width: auto;
+}
+
+.elements-page .elements-table-full {
+  width: 100%;
+}
+
+.elements-page .elements-fieldset {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+}
+
+.elements-page iframe {
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid var(--color-border);
+}

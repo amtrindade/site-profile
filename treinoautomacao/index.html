@@ -15,6 +15,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/justified-nav.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/components.css" rel="stylesheet">
 
     <!-- favicons
   ================================================== -->
@@ -31,13 +34,11 @@
   </head>
 
   <body>
-
-    <div class="container">
-
-      <div class="masthead">
+    <div class="container home-shell">
+      <header class="masthead" role="banner">
         <h3 class="text-muted">Treinamento em Automação de Testes</h3>
         <ul class="nav nav-justified">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
           <li><a href="desafiosoma.html">Calculadora</a></li>
           <li><a href="localizandovalorestable.html">Localizar Table</a></li>
@@ -45,27 +46,46 @@
           <li><a href="elementsweb.html">Web Elementos</a></li>
           <li><a href="geradorcpf.html">Gerador CPF</a></li>
         </ul>
-      </div>
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Treino Automação de Testes</h1>
-        <p class="lead">Site utilizado como objeto de treino para o Curso de Automação de Testes Funcionais!</p>
-        <p><a class="btn btn-lg btn-success" href="mailto:amtrindade@gmail.com" role="button">Envie e-mail</a></p>
-      </div>
-	  	  <!-- Links -->
-	  <div class="links">        
-        <p class="lead">Links</p>
-		<a href="http://goo.gl/DNVUR" target="_blank">Formulário de Cadastro</a></br>	
-		<a href="https://www.geradordecpf.org/" target="_blank">Gerador de CPF</a></br>
-    <a href="http://www.sahi.co.in/demo/dragDropMooTools.htm" target="_blank">Drag and Drop</a></br>
-    <a href="http://jqueryui.com/resources/demos/droppable/default.html" target="_blank">Drag and Drop JQuery</a></br>
-		<a href="http://www.sahi.co.in/demo/training/login.htm" target="_blank">Book Store</a></br>		
-      </div>
-      <!-- Site footer -->
-      <div class="footer">
-        <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
-      </div>
+      </header>
 
-    </div> 
+      <main class="home-main" role="main">
+        <section class="home-hero panel-soft" aria-labelledby="home-title">
+          <p class="home-kicker">Ambiente de estudo</p>
+          <h1 class="home-title" id="home-title">Treino de automação com cenários reais para prática diária</h1>
+          <p class="home-subtitle">Use esta página como ponto de partida para validar seletores, interações e fluxos em exercícios funcionais.</p>
+          <div class="actions-row">
+            <a class="btn btn-success btn-lg" href="desafiosoma.html" role="button">Ir para Calculadora</a>
+            <a class="btn btn-primary btn-lg" href="geradorcpf.html" role="button">Abrir Gerador CPF</a>
+            <a class="btn btn-default btn-lg" href="mailto:amtrindade@gmail.com" role="button">Enviar e-mail</a>
+          </div>
+        </section>
+
+        <section class="home-grid" aria-label="Navegação rápida">
+          <article class="panel-soft">
+            <h2 class="section-title">Exercícios principais</h2>
+            <ul class="home-list">
+              <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
+              <li><a href="desafiosoma.html">Calculadora</a></li>
+              <li><a href="localizandovalorestable.html">Localizar Table</a></li>
+              <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
+              <li><a href="elementsweb.html">Web Elementos</a></li>
+            </ul>
+          </article>
+
+          <article class="panel-soft">
+            <h2 class="section-title">Links de apoio</h2>
+            <ul class="home-list">
+              <li><a href="http://goo.gl/DNVUR" target="_blank" rel="noopener noreferrer">Formulário de Cadastro</a></li>
+              <li><a href="https://www.geradordecpf.org/" target="_blank" rel="noopener noreferrer">Gerador de CPF</a></li>
+              <li><a href="http://www.sahi.co.in/demo/dragDropMooTools.htm" target="_blank" rel="noopener noreferrer">Drag and Drop</a></li>
+              <li><a href="http://jqueryui.com/resources/demos/droppable/default.html" target="_blank" rel="noopener noreferrer">Drag and Drop JQuery</a></li>
+              <li><a href="http://www.sahi.co.in/demo/training/login.htm" target="_blank" rel="noopener noreferrer">Book Store</a></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer home-footer" role="contentinfo"></footer>
+    </div>
   </body>
 </html>
