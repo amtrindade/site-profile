@@ -5,14 +5,13 @@ Modo: static-only (sem build)
 
 ## Resumo
 - Total de tasks: 11
-- not-started: 9
+- not-started: 8
 - in-progress: 0
 - blocked: 0
-- done: 2
+- done: 3
 
 ## Kanban por Status
 ### not-started
-- [ ] T2 - Atualizar shell visual da home
 - [ ] T3 - Separar JS e CSS de desafiosoma
 - [ ] T4 - Separar JS e CSS de alertsconfirmation
 - [ ] T5 - Refatorar localizandovalorestable
@@ -31,13 +30,14 @@ Modo: static-only (sem build)
 ### done
 - [x] T0 - Baseline e mapeamento
 - [x] T1 - Criar fundacao CSS estatica
+- [x] T2 - Atualizar shell visual da home
 
 ## Tabela de Acompanhamento
 | ID | Titulo | Status | Dependencias | Criterio principal |
 |---|---|---|---|---|
 | T0 | Baseline e mapeamento | done | - | Checklist inicial preenchido |
 | T1 | Criar fundacao CSS estatica | done | T0 | Arquivos CSS carregam via link tradicional |
-| T2 | Atualizar shell visual da home | not-started | T1 | Home responsiva em desktop e mobile |
+| T2 | Atualizar shell visual da home | done | T1 | Home responsiva em desktop e mobile |
 | T3 | Separar JS e CSS de desafiosoma | not-started | T1 | Sem style inline |
 | T4 | Separar JS e CSS de alertsconfirmation | not-started | T1 | Eventos ligados por addEventListener |
 | T5 | Refatorar localizandovalorestable | not-started | T1 | Tabela com markup consistente |

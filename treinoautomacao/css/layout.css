@@ -59,12 +59,22 @@
 
 .footer {
   margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-5);
   min-height: 24px;
+}
+
+.footer p {
+  margin: 0;
 }
 
 @media (max-width: 767px) {
   .container {
     padding: var(--space-4);
+  }
+
+  .nav.nav-justified > li {
+    display: block;
+    width: 100%;
   }
 
   .jumbotron,

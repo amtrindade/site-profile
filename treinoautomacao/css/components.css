@@ -41,3 +41,73 @@ input[type="button"],
 input[type="submit"] {
   border-radius: var(--radius-sm);
 }
+
+.home-main {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -70px;
+  top: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(11, 110, 79, 0.16) 0%, rgba(11, 110, 79, 0) 72%);
+  pointer-events: none;
+}
+
+.home-kicker {
+  margin: 0 0 var(--space-3);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.home-title {
+  margin: 0;
+  max-width: 26ch;
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  margin: var(--space-4) 0 var(--space-5);
+  color: var(--color-muted);
+  max-width: 58ch;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.home-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.home-list li + li {
+  margin-top: var(--space-2);
+}
+
+.home-footer {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}

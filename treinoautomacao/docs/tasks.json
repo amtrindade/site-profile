@@ -53,7 +53,7 @@
     {
       "id": "T2",
       "title": "Atualizar shell visual da home",
-      "status": "not-started",
+      "status": "done",
       "description": "Refatorar index.html com layout moderno mantendo navegacao funcional.",
       "dependsOn": [
         "T1"
@@ -61,6 +61,11 @@
       "acceptanceCriteria": [
         "Home responsiva em desktop e mobile",
         "Nav com estado ativo consistente"
+      ],
+      "notes": [
+        "Home refatorada com estrutura semantica (header/main/footer)",
+        "Layout responsivo aplicado com hero + grid de cards",
+        "Estado ativo da nav mantido com li.active e aria-current=page"
       ]
     },
     {
