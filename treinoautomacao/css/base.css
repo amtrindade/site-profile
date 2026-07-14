@@ -1,0 +1,65 @@
+:root {
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-text: #1f2933;
+  --color-muted: #52606d;
+  --color-primary: #0b6e4f;
+  --color-primary-strong: #084c38;
+  --color-border: #d9e2ec;
+  --color-focus: #f0b429;
+  --shadow-soft: 0 12px 28px rgba(31, 41, 51, 0.08);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f6 100%);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-strong);
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}

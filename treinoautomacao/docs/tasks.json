@@ -36,7 +36,7 @@
     {
       "id": "T1",
       "title": "Criar fundacao CSS estatica",
-      "status": "not-started",
+      "status": "done",
       "description": "Criar css/base.css, css/layout.css e css/components.css sem build.",
       "dependsOn": [
         "T0"
@@ -44,6 +44,10 @@
       "acceptanceCriteria": [
         "Arquivos CSS carregam via link tradicional",
         "Sem dependencias de preprocessador"
+      ],
+      "notes": [
+        "Arquivos criados: css/base.css, css/layout.css e css/components.css",
+        "Links adicionados em todas as paginas HTML via <link rel=\"stylesheet\">"
       ]
     },
     {
