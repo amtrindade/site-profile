@@ -1,0 +1,176 @@
+{
+  "feature": "pagina-gerador-validador-cpf",
+  "project": "treinoautomacao",
+  "summary": "Criar pagina HTML com geracao e validacao de CPF, com feedback visual e opcao de mascara.",
+  "constraints": [
+    "Sem backend",
+    "Manter padrao visual atual",
+    "Usar Bootstrap existente",
+    "Implementacao em HTML + JavaScript"
+  ],
+  "deliverables": [
+    "geradorcpf.html",
+    "index.html atualizado",
+    "documentacao de regras CPF"
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Criar estrutura base da pagina geradorcpf.html",
+      "description": "Reaproveitar container, masthead e nav no padrao das paginas atuais.",
+      "dependsOn": [],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Pagina abre no navegador",
+        "Header/nav seguem padrao visual do projeto"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Montar formulario (textfield, botao e checkbox)",
+      "description": "Adicionar campo CPF, botao Gerar CPF e checkbox Exibir mascara.",
+      "dependsOn": [
+        "T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Campo CPF visivel e editavel",
+        "Botao de gerar disponivel",
+        "Checkbox de mascara funcional na interface"
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Implementar utilitarios de normalizacao e mascara",
+      "description": "Criar funcoes para remover caracteres nao numericos e aplicar mascara de CPF.",
+      "dependsOn": [
+        "T2"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Valor pode ser convertido para somente digitos",
+        "Mascara 000.000.000-00 aplicada corretamente"
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Implementar algoritmo de validacao de CPF",
+      "description": "Calcular DV1/DV2, bloquear CPFs repetidos e retornar status valido/invalido.",
+      "dependsOn": [
+        "T3"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Valida CPFs corretos",
+        "Rejeita CPFs com DV incorreto",
+        "Rejeita sequencias de digitos repetidos"
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Implementar gerador randomico de CPF valido",
+      "description": "Gerar base de 9 digitos e calcular DVs para produzir CPF valido.",
+      "dependsOn": [
+        "T4"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Cada clique no botao gera um CPF valido",
+        "Valor gerado aparece no campo"
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Aplicar feedback visual de validacao no input",
+      "description": "Adicionar classes CSS para borda verde/vermelha e estado neutro para campo vazio.",
+      "dependsOn": [
+        "T4"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Borda verde para CPF valido",
+        "Borda vermelha para CPF invalido",
+        "Campo vazio sem destaque"
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Conectar eventos (input, click, change)",
+      "description": "Integrar validacao em tempo real, geracao no clique e alternancia de mascara.",
+      "dependsOn": [
+        "T5",
+        "T6"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Digitacao atualiza status visual",
+        "Checkbox reformatando valor sem quebrar validacao",
+        "Geracao respeita estado do checkbox"
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Atualizar navegacao no index.html",
+      "description": "Adicionar item de menu para acessar geradorcpf.html.",
+      "dependsOn": [
+        "T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Link da nova pagina aparece na Home",
+        "Navegacao funciona sem regressao"
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Executar checklist manual de aceitacao",
+      "description": "Validar cenarios principais de geracao, validacao visual e mascara.",
+      "dependsOn": [
+        "T7",
+        "T8"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Todos os criterios CA-01..CA-08 validados",
+        "Resultado registrado no fechamento da tarefa"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9"
+  ],
+  "keyRisks": [
+    {
+      "id": "R1",
+      "description": "Erro no calculo dos digitos verificadores",
+      "mitigation": "Usar referencias de calculo documentadas e testar com CPFs conhecidos"
+    },
+    {
+      "id": "R2",
+      "description": "Inconsistencia entre mascara e valor validado",
+      "mitigation": "Validar sempre string sem mascara e mascarar apenas na exibicao"
+    },
+    {
+      "id": "R3",
+      "description": "Alteracao de menu quebrar navegacao existente",
+      "mitigation": "Alterar somente item necessario e testar todos os links"
+    }
+  ]
+}
