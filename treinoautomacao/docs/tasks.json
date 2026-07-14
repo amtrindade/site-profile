@@ -1,0 +1,192 @@
+{
+  "project": "treinoautomacao",
+  "planFile": "docs/plan.md",
+  "mode": "static-only",
+  "summary": "Execucao do refactor de layout sem etapa de build, mantendo projeto 100% estatico.",
+  "constraints": [
+    "Sem bundler",
+    "Sem transpiler",
+    "Sem task runner",
+    "Sem pipeline de build",
+    "Carregamento direto de arquivos .html, .css e .js",
+    "Preservar reutilizacao de IDs em elementsweb.html por requisito didatico"
+  ],
+  "deliverables": [
+    "docs/plan.md",
+    "docs/tasks.json",
+    "docs/checklist-regressao.md",
+    "docs/guia-estilo.md"
+  ],
+  "tasks": [
+    {
+      "id": "T0",
+      "title": "Baseline e mapeamento",
+      "status": "done",
+      "description": "Mapear seletores criticos, registrar estado atual e criar base de comparacao visual.",
+      "dependsOn": [],
+      "acceptanceCriteria": [
+        "Checklist inicial preenchido",
+        "IDs e classes criticos listados por pagina"
+      ],
+      "notes": [
+        "Baseline inicial documentado em docs/checklist-regressao.md",
+        "Inventario de IDs e classes criticos por pagina registrado"
+      ]
+    },
+    {
+      "id": "T1",
+      "title": "Criar fundacao CSS estatica",
+      "status": "not-started",
+      "description": "Criar css/base.css, css/layout.css e css/components.css sem build.",
+      "dependsOn": [
+        "T0"
+      ],
+      "acceptanceCriteria": [
+        "Arquivos CSS carregam via link tradicional",
+        "Sem dependencias de preprocessador"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Atualizar shell visual da home",
+      "status": "not-started",
+      "description": "Refatorar index.html com layout moderno mantendo navegacao funcional.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Home responsiva em desktop e mobile",
+        "Nav com estado ativo consistente"
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Separar JS e CSS de desafiosoma",
+      "status": "not-started",
+      "description": "Mover estilos e scripts inline para arquivos externos e ligar por link/script defer.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Sem style inline",
+        "Sem onclick inline",
+        "Comportamento atual preservado"
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Separar JS e CSS de alertsconfirmation",
+      "status": "not-started",
+      "description": "Extrair comportamento de alerta/confirmacao para js/pages/alerts.js.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Eventos ligados por addEventListener",
+        "Fluxo de alertas sem regressao"
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Refatorar localizandovalorestable",
+      "status": "not-started",
+      "description": "Melhorar semantica da tabela e extrair scripts/estilos mantendo fluxo de reserva.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Tabela com markup consistente",
+        "Acao de reserva preservada"
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Refatorar utilizandoxpath",
+      "status": "not-started",
+      "description": "Corrigir estrutura HTML e separar comportamento em JS externo.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "Documento sem body duplicado",
+        "Layout responsivo e sem regressao"
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Refatorar elementsweb com excecao didatica",
+      "status": "not-started",
+      "description": "Modernizar estrutura e separar inline, mantendo reutilizacao de IDs por requisito do curso.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "IDs reaproveitados preservados",
+        "Sem alterar logica do exercicio",
+        "Demais melhorias aplicadas com cuidado"
+      ],
+      "notes": [
+        "Nao normalizar IDs unicos nesta pagina",
+        "Evitar mudancas que quebrem materiais do curso"
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Consolidar geradorcpf",
+      "status": "not-started",
+      "description": "Validar padrao final de separacao e consistencia visual na pagina de CPF.",
+      "dependsOn": [
+        "T1"
+      ],
+      "acceptanceCriteria": [
+        "CSS e JS externos",
+        "Feedback visual e fluxo atual preservados"
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Revisao de regressao manual",
+      "status": "not-started",
+      "description": "Executar checklist-regressao por pagina em desktop e mobile.",
+      "dependsOn": [
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "acceptanceCriteria": [
+        "Checklist preenchido com status por pagina",
+        "Sem regressao funcional critica"
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Fechamento e padronizacao",
+      "status": "not-started",
+      "description": "Revisar aderencia ao guia de estilo e atualizar docs de manutencao.",
+      "dependsOn": [
+        "T9"
+      ],
+      "acceptanceCriteria": [
+        "Padrao estatico respeitado",
+        "Documentacao pronta para proximas iteracoes"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "T0",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10"
+  ]
+}
