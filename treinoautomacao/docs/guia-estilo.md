@@ -80,3 +80,14 @@ Exemplo de JS por pagina:
 ```html
 <script defer src="js/pages/home.js"></script>
 ```
+
+## 11. Fechamento e Manutencao
+- Documento de manutencao do refactor: docs/manutencao-refactor.md.
+- Toda iteracao deve atualizar:
+  - docs/tasks.json
+  - docs/tasks-board.md
+  - docs/checklist-regressao.md
+- Antes de finalizar uma iteracao:
+  - validar desktop e mobile
+  - validar fluxos criticos da pagina alterada
+  - confirmar compatibilidade com automacao existente

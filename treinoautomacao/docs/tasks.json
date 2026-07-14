@@ -106,7 +106,7 @@
     {
       "id": "T5",
       "title": "Refatorar localizandovalorestable",
-      "status": "not-started",
+      "status": "done",
       "description": "Melhorar semantica da tabela e extrair scripts/estilos mantendo fluxo de reserva.",
       "dependsOn": [
         "T1"
@@ -114,12 +114,16 @@
       "acceptanceCriteria": [
         "Tabela com markup consistente",
         "Acao de reserva preservada"
+      ],
+      "notes": [
+        "Criados css/pages/tabela.css e js/pages/tabela.js",
+        "Tabela migrada para thead/tbody e fluxo de reserva preservado com feedback em #minha_div"
       ]
     },
     {
       "id": "T6",
       "title": "Refatorar utilizandoxpath",
-      "status": "not-started",
+      "status": "done",
       "description": "Corrigir estrutura HTML e separar comportamento em JS externo.",
       "dependsOn": [
         "T1"
@@ -127,12 +131,16 @@
       "acceptanceCriteria": [
         "Documento sem body duplicado",
         "Layout responsivo e sem regressao"
+      ],
+      "notes": [
+        "Documento corrigido para um unico body e sem script legado inline",
+        "Criados css/pages/xpath.css e js/pages/xpath.js"
       ]
     },
     {
       "id": "T7",
       "title": "Refatorar elementsweb com excecao didatica",
-      "status": "not-started",
+      "status": "done",
       "description": "Modernizar estrutura e separar inline, mantendo reutilizacao de IDs por requisito do curso.",
       "dependsOn": [
         "T1"
@@ -144,13 +152,14 @@
       ],
       "notes": [
         "Nao normalizar IDs unicos nesta pagina",
-        "Evitar mudancas que quebrem materiais do curso"
+        "Evitar mudancas que quebrem materiais do curso",
+        "Criados css/pages/elementsweb.css e js/pages/elementsweb.js com IDs reaproveitados preservados"
       ]
     },
     {
       "id": "T8",
       "title": "Consolidar geradorcpf",
-      "status": "not-started",
+      "status": "done",
       "description": "Validar padrao final de separacao e consistencia visual na pagina de CPF.",
       "dependsOn": [
         "T1"
@@ -158,12 +167,16 @@
       "acceptanceCriteria": [
         "CSS e JS externos",
         "Feedback visual e fluxo atual preservados"
+      ],
+      "notes": [
+        "Migrado inline para css/pages/gerador-cpf.css e js/pages/gerador-cpf.js",
+        "Fluxo de mascara, validacao e geracao com delay preservado"
       ]
     },
     {
       "id": "T9",
       "title": "Revisao de regressao manual",
-      "status": "not-started",
+      "status": "done",
       "description": "Executar checklist-regressao por pagina em desktop e mobile.",
       "dependsOn": [
         "T2",
@@ -177,12 +190,16 @@
       "acceptanceCriteria": [
         "Checklist preenchido com status por pagina",
         "Sem regressao funcional critica"
+      ],
+      "notes": [
+        "Smoke desktop/mobile executado em 2026-07-14",
+        "Sem regressao funcional critica detectada nos fluxos principais"
       ]
     },
     {
       "id": "T10",
       "title": "Fechamento e padronizacao",
-      "status": "not-started",
+      "status": "done",
       "description": "Revisar aderencia ao guia de estilo e atualizar docs de manutencao.",
       "dependsOn": [
         "T9"
@@ -190,6 +207,11 @@
       "acceptanceCriteria": [
         "Padrao estatico respeitado",
         "Documentacao pronta para proximas iteracoes"
+      ],
+      "notes": [
+        "Guia de estilo revisado com orientacoes de fechamento",
+        "Documento de manutencao criado: docs/manutencao-refactor.md",
+        "Ciclo T0-T10 finalizado na branch newlayout"
       ]
     }
   ],

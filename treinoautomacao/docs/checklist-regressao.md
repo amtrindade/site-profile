@@ -109,8 +109,33 @@ Validar regressao funcional e visual apos o refactor, mantendo projeto 100% esta
 - Sem assets quebrados apos separacao de CSS e JS.
 
 ## Registro de Execucao
-- Data: 2026-07-14
-- Ambiente: macOS (execucao local)
-- Responsavel: Copilot
-- Resultado geral: OK
-- Observacoes: baseline inicial preenchido e pronto para comparacao nas proximas tasks (T1+).
+- Execucao 1 (baseline T0)
+	- Data: 2026-07-14
+	- Ambiente: macOS (execucao local)
+	- Responsavel: Copilot
+	- Resultado geral: OK
+	- Observacoes: baseline inicial preenchido e pronto para comparacao nas proximas tasks (T1+).
+
+- Execucao 2 (regressao T9)
+	- Data: 2026-07-14
+	- Ambiente: macOS + browser integrado (desktop 1366x900 e mobile 390x844)
+	- Responsavel: Copilot
+	- Resultado geral: OK
+	- Status por pagina:
+		- index.html: OK
+		- alertsconfirmation.html: OK
+		- desafiosoma.html: OK
+		- localizandovalorestable.html: OK
+		- utilizandoxpath.html: OK
+		- elementsweb.html: OK
+		- geradorcpf.html: OK
+	- Evidencias principais:
+		- calculadora: soma com delay e limpar campos funcionando
+		- alertsconfirmation: alert/confirm (normal e com delay) executados
+		- tabela: reserva com selecao + e-mail atualiza #minha_div
+		- xpath: reserva valida nome/sobrenome e assentos
+		- elementsweb: IDs reaproveitados preservados (contagem #elementos > 1) e alert/confirm acionados
+		- geradorcpf: gera CPF valido com mascara apos delay
+	- Observacoes:
+		- Prompt em elementsweb nao retornou dialog no runner integrado; codigo permanece com chamada de prompt em JS externo.
+		- Nenhuma regressao funcional critica identificada no smoke test.

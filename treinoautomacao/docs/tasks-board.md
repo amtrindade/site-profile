@@ -5,19 +5,14 @@ Modo: static-only (sem build)
 
 ## Resumo
 - Total de tasks: 11
-- not-started: 6
+- not-started: 0
 - in-progress: 0
 - blocked: 0
-- done: 5
+- done: 11
 
 ## Kanban por Status
 ### not-started
-- [ ] T5 - Refatorar localizandovalorestable
-- [ ] T6 - Refatorar utilizandoxpath
-- [ ] T7 - Refatorar elementsweb com excecao didatica
-- [ ] T8 - Consolidar geradorcpf
-- [ ] T9 - Revisao de regressao manual
-- [ ] T10 - Fechamento e padronizacao
+- Nenhuma task
 
 ### in-progress
 - Nenhuma task
@@ -31,6 +26,12 @@ Modo: static-only (sem build)
 - [x] T2 - Atualizar shell visual da home
 - [x] T3 - Separar JS e CSS de desafiosoma
 - [x] T4 - Separar JS e CSS de alertsconfirmation
+- [x] T5 - Refatorar localizandovalorestable
+- [x] T6 - Refatorar utilizandoxpath
+- [x] T7 - Refatorar elementsweb com excecao didatica
+- [x] T8 - Consolidar geradorcpf
+- [x] T9 - Revisao de regressao manual
+- [x] T10 - Fechamento e padronizacao
 
 ## Tabela de Acompanhamento
 | ID | Titulo | Status | Dependencias | Criterio principal |
@@ -40,12 +41,12 @@ Modo: static-only (sem build)
 | T2 | Atualizar shell visual da home | done | T1 | Home responsiva em desktop e mobile |
 | T3 | Separar JS e CSS de desafiosoma | done | T1 | Sem style inline |
 | T4 | Separar JS e CSS de alertsconfirmation | done | T1 | Eventos ligados por addEventListener |
-| T5 | Refatorar localizandovalorestable | not-started | T1 | Tabela com markup consistente |
-| T6 | Refatorar utilizandoxpath | not-started | T1 | Documento sem body duplicado |
-| T7 | Refatorar elementsweb com excecao didatica | not-started | T1 | IDs reaproveitados preservados |
-| T8 | Consolidar geradorcpf | not-started | T1 | CSS e JS externos |
-| T9 | Revisao de regressao manual | not-started | T2, T3, T4, T5, T6, T7, T8 | Checklist preenchido com status por pagina |
-| T10 | Fechamento e padronizacao | not-started | T9 | Padrao estatico respeitado |
+| T5 | Refatorar localizandovalorestable | done | T1 | Tabela com markup consistente |
+| T6 | Refatorar utilizandoxpath | done | T1 | Documento sem body duplicado |
+| T7 | Refatorar elementsweb com excecao didatica | done | T1 | IDs reaproveitados preservados |
+| T8 | Consolidar geradorcpf | done | T1 | CSS e JS externos |
+| T9 | Revisao de regressao manual | done | T2, T3, T4, T5, T6, T7, T8 | Checklist preenchido com status por pagina |
+| T10 | Fechamento e padronizacao | done | T9 | Padrao estatico respeitado |
 
 ## Ordem de Execucao Recomendada
 T0 -> T1 -> T2 -> T3 -> T4 -> T5 -> T6 -> T7 -> T8 -> T9 -> T10

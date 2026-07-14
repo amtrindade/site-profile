@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Amtrindade - Treinamento em automação de testes">
     <meta name="author" content="Antonio Trindade - http://about.me/amtrindade">
@@ -16,42 +16,10 @@
     <link href="css/base.css" rel="stylesheet">
     <link href="css/layout.css" rel="stylesheet">
     <link href="css/components.css" rel="stylesheet">
-
-<script type="text/javascript">
-    function alertFunction()
-        {
-            alert("Eu sou um alerta!");
-        }
-
-    function confirmFunction()
-        {
-            var x;
-            var r = confirm("Pressione um botão!");
-            if (r == true)
-            {
-                x = "Você pressionou OK!";
-            }
-            else
-            {
-                x = "Você pressionou Cancelar!";
-            } 
-        }
-    function promptFunction()
-            {
-                var x;
-
-                var person = prompt("Por favor, insira seu nome:", "Chuck Norris");
-
-                if (person != null)
-                {
-                    x = "Olá " + person + "! Está tudo bem com você?";
-                }
-                
-            }
-</script>
+    <link href="css/pages/elementsweb.css" rel="stylesheet">
 </head>
-<body>
-      <div class="container">
+<body class="elements-page">
+  <div class="container">
 
       <div class="masthead">
         <h3 class="text-muted">Treinamento em Automação de Testes</h3>
@@ -64,13 +32,14 @@
           <li class="active"><a href="elementsweb.html">Web Elementos</a></li>
         </ul>
       </div>
-      </div>
-        <form name="seltestfrm">
+
+            <main class="elements-shell panel-soft" role="main">
+                <form name="seltestfrm">
             <div id="elementos">
-                <h3 class="text-muted">Elementos TextField:</h2>
+                                <h3 class="text-muted">Elementos TextField:</h3>
             </div>
                     <div id="input">
-                        <table style="width: auto;" border="0">
+                                                <table class="elements-table" border="0">
                             <tr>    
                                     <td>TextField Enable:</td>
                                     <td><input name="txtbox1" type="text" size='50px' placeholder="Digite o seu nome" /></td>
@@ -82,10 +51,10 @@
                         </table>
         </div>
         <div id="elementos">
-            <h3 class="text-muted">Elementos Radio Button:</h2>
+            <h3 class="text-muted">Elementos Radio Button:</h3>
         </div>
         <div id="box">
-                        <table style="width: auto;" border="0">
+                        <table class="elements-table" border="0">
                             <tbody>
                                 <tr>
                                     <td>
@@ -123,10 +92,10 @@
                         </table>
         </div>
         <div id="elementos">
-                        <h3 class="text-muted">Elementos Checkbox:</h2>
+                        <h3 class="text-muted">Elementos Checkbox:</h3>
         </div>
                         <div id="box">
-                        <table style="width: auto;" border="0">
+                        <table class="elements-table" border="0">
                             <tbody>
                                 <tr>
                                     <td>
@@ -164,7 +133,7 @@
                         </table>
                     </div>
                     <div id="elementos">
-                        <h3 class="text-muted">DropDown List Single:</h2>
+                        <h3 class="text-muted">DropDown List Single:</h3>
                     </div>
                     <div id="list">
                                         <select name="dropdownlist" size="6">
@@ -181,7 +150,7 @@
                                         </select>
                     </div>
                     <div id="elementos">
-                        <h3 class="text-muted">Drop Down List Multi Selected:</h2>
+                        <h3 class="text-muted">Drop Down List Multi Selected:</h3>
                     </div>
                     <div id="list">
                                         <select multiple="multiple" name="multiselectdropdown" size="6">
@@ -198,13 +167,13 @@
                                         </select>
                     </div>
                       
-                        <fieldset style="width: 100%;" title="IframeTest">
+                        <fieldset class="elements-fieldset" title="IframeTest">
                         <div id="elementos">
-                            <h3 class="text-muted">IFrame:</h2>
+                            <h3 class="text-muted">IFrame:</h3>
                         </div>
                         <div id="iframes">
                         <frameset title="frmset1">
-                            <table style="width: 100%;">
+                            <table class="elements-table-full">
                                 <tbody>
                                 <tr>
                                         <td>
@@ -220,7 +189,7 @@
                         </frameset>
                         <br />
                         <frameset title="frmset2">
-                            <table style="width: 100%;">
+                            <table class="elements-table-full">
 
                                 <tbody>
                                     <tr>
@@ -228,7 +197,7 @@
                                           <iframe name="iframe_c" scrolling="yes" src="http://sahitest.com/demo/dragDropDataTransfer.htm"></iframe>  
                                         </td>
                                         <td>
-                                            <iframe name="iframe_d" scrolling="yes" src="http://www.seleniumhq.org/"></iframe>
+                                            <iframe name="iframe_d" scrolling="yes" src="https://www.selenium.dev/pt-br/"></iframe>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -239,17 +208,17 @@
                     </div>
 					
                     <div id="elementos">
-                        <h3 class="text-muted">Utilizando POP UP:</h2>
+                        <h3 class="text-muted">Utilizando POP UP:</h3>
                     </div>
                     <div  id="box">
-                        <table style="width: auto;">
+                        <table class="elements-table">
                             <tbody>
                             <tr>
                                     <td>
                                         Simple Alert Box Message
                                     </td>
                                     <td>
-                                        <input name="alertbtn" onclick="alertFunction()" type="button" value="Alert" />
+                                        <input name="alertbtn" type="button" value="Alert" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -257,7 +226,7 @@
                                         Simple Confirm Box Message
                                     </td>
                                     <td>
-                                        <input name="confirmbtn" onclick="confirmFunction()" type="button" value="Confirm" />
+                                        <input name="confirmbtn" type="button" value="Confirm" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -265,15 +234,19 @@
                                         Simple Prompt Box Message
                                     </td>
                                     <td>
-                                        <input name="promptbtn" onclick="promptFunction()" type="button" value="Prompt" />
+                                        <input name="promptbtn" type="button" value="Prompt" />
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                            <!-- Site footer -->        
+        </form>
+      </main>
+                            <!-- Site footer -->
         <div class="footer">
             <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
         </div>
+  </div>
+  <script src="js/pages/elementsweb.js" defer></script>
 </body>
 </html>
