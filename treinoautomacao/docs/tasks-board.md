@@ -5,15 +5,13 @@ Modo: static-only (sem build)
 
 ## Resumo
 - Total de tasks: 11
-- not-started: 8
+- not-started: 6
 - in-progress: 0
 - blocked: 0
-- done: 3
+- done: 5
 
 ## Kanban por Status
 ### not-started
-- [ ] T3 - Separar JS e CSS de desafiosoma
-- [ ] T4 - Separar JS e CSS de alertsconfirmation
 - [ ] T5 - Refatorar localizandovalorestable
 - [ ] T6 - Refatorar utilizandoxpath
 - [ ] T7 - Refatorar elementsweb com excecao didatica
@@ -31,6 +29,8 @@ Modo: static-only (sem build)
 - [x] T0 - Baseline e mapeamento
 - [x] T1 - Criar fundacao CSS estatica
 - [x] T2 - Atualizar shell visual da home
+- [x] T3 - Separar JS e CSS de desafiosoma
+- [x] T4 - Separar JS e CSS de alertsconfirmation
 
 ## Tabela de Acompanhamento
 | ID | Titulo | Status | Dependencias | Criterio principal |
@@ -38,8 +38,8 @@ Modo: static-only (sem build)
 | T0 | Baseline e mapeamento | done | - | Checklist inicial preenchido |
 | T1 | Criar fundacao CSS estatica | done | T0 | Arquivos CSS carregam via link tradicional |
 | T2 | Atualizar shell visual da home | done | T1 | Home responsiva em desktop e mobile |
-| T3 | Separar JS e CSS de desafiosoma | not-started | T1 | Sem style inline |
-| T4 | Separar JS e CSS de alertsconfirmation | not-started | T1 | Eventos ligados por addEventListener |
+| T3 | Separar JS e CSS de desafiosoma | done | T1 | Sem style inline |
+| T4 | Separar JS e CSS de alertsconfirmation | done | T1 | Eventos ligados por addEventListener |
 | T5 | Refatorar localizandovalorestable | not-started | T1 | Tabela com markup consistente |
 | T6 | Refatorar utilizandoxpath | not-started | T1 | Documento sem body duplicado |
 | T7 | Refatorar elementsweb com excecao didatica | not-started | T1 | IDs reaproveitados preservados |

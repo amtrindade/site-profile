@@ -71,7 +71,7 @@
     {
       "id": "T3",
       "title": "Separar JS e CSS de desafiosoma",
-      "status": "not-started",
+      "status": "done",
       "description": "Mover estilos e scripts inline para arquivos externos e ligar por link/script defer.",
       "dependsOn": [
         "T1"
@@ -80,12 +80,16 @@
         "Sem style inline",
         "Sem onclick inline",
         "Comportamento atual preservado"
+      ],
+      "notes": [
+        "Criados css/pages/desafiosoma.css e js/pages/desafiosoma.js",
+        "Eventos migrados para addEventListener com IDs originais preservados"
       ]
     },
     {
       "id": "T4",
       "title": "Separar JS e CSS de alertsconfirmation",
-      "status": "not-started",
+      "status": "done",
       "description": "Extrair comportamento de alerta/confirmacao para js/pages/alerts.js.",
       "dependsOn": [
         "T1"
@@ -93,6 +97,10 @@
       "acceptanceCriteria": [
         "Eventos ligados por addEventListener",
         "Fluxo de alertas sem regressao"
+      ],
+      "notes": [
+        "Criados css/pages/alerts.css e js/pages/alerts.js",
+        "Acoes de alerta/confirmacao normal e com delay migradas para JS externo"
       ]
     },
     {

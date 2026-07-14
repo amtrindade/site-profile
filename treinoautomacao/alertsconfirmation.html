@@ -16,9 +16,10 @@
 	<link href="css/base.css" rel="stylesheet">
 	<link href="css/layout.css" rel="stylesheet">
 	<link href="css/components.css" rel="stylesheet">
+	<link href="css/pages/alerts.css" rel="stylesheet">
 	
 </head>
-<body>
+<body class="alerts-page">
 	<div class="container">
 
       <div class="masthead">
@@ -33,32 +34,21 @@
         </ul>
       </div>
 
-	<br>
-    <ol>       
-		<form id="form1" action="#">
-			<input type="submit" id="alerta1" value="Exibir alerta!" onClick="exibir('alerta')">
-			<input type="submit" id="confirmacao1" value="Exibir confirmação!" onClick="exibir('confirmacao')"><br>
+	<main class="alerts-card panel-soft" role="main">
+		<form id="form1" action="#" class="alerts-actions">
+			<input type="submit" id="alerta1" value="Exibir alerta!">
+			<input type="submit" id="confirmacao1" value="Exibir confirmação!">
 		</form>
-		
-		<script type="text/javascript">
-			function exibir(tipo) {
-				if (tipo == "alerta") {
-					alert('Olá!!! Eu sou um alerta!!!');
-				}
-				if (tipo == "confirmacao") {
-					confirm('Olá!!! Eu sou a confirmação! Você vai fazer o que? (clicar em OK ou Cancelar?)');
-				}
-			}
-		</script>		
-		<br>
-		<form>
-			<input value="Exibir um alerta com delay!" onclick="setTimeout('alert(\'Olá!!! Eu sou um alerta com delay!!!\')',2000);" type="button">
-			<input value="Exibir uma confirmação com delay!" onclick="setTimeout('confirm(\'Olá!!! Eu sou a confirmação com delay! Você vai fazer o que? Clicar em OK ou Cancelar?\')',2000);" type="button">
+
+		<form class="alerts-actions">
+			<input id="alerta-delay" value="Exibir um alerta com delay!" type="button">
+			<input id="confirmacao-delay" value="Exibir uma confirmação com delay!" type="button">
 		</form>
-    </ol>
+	</main>
 	<div class="footer">
         <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
       </div>
 	</div>
+	<script src="js/pages/alerts.js" defer></script>
 </body>
 </html>
