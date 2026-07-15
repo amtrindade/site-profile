@@ -1,7 +1,7 @@
 (function () {
-  var alertButton = document.querySelector('input[name="alertbtn"]');
-  var confirmButton = document.querySelector('input[name="confirmbtn"]');
-  var promptButton = document.querySelector('input[name="promptbtn"]');
+  const alertButton = document.querySelector('input[name="alertbtn"]');
+  const confirmButton = document.querySelector('input[name="confirmbtn"]');
+  const promptButton = document.querySelector("#promptBtn");
 
   function alertFunction() {
     globalThis.alert("Eu sou um alerta!");
@@ -11,12 +11,20 @@
     globalThis.confirm("Pressione um botão!");
   }
 
-  function promptFunction() {
-    var person = globalThis.prompt("Por favor, insira seu nome:", "Chuck Norris");
-    if (person !== null) {
-      return "Olá " + person + "! Está tudo bem com você?";
+  function promptValidationFunction() {
+    let result;
+    try {
+      result = globalThis.prompt("Digite o ano:");
+    } catch (error) {
+      result = "";
     }
-    return "";
+
+    if (globalThis.confirm("O ano é " + result + "?")) {
+      globalThis.alert("Feito!");
+      return;
+    }
+
+    globalThis.alert("Nada feito!");
   }
 
   if (alertButton) {
@@ -26,6 +34,6 @@
     confirmButton.addEventListener("click", confirmFunction);
   }
   if (promptButton) {
-    promptButton.addEventListener("click", promptFunction);
+    promptButton.addEventListener("click", promptValidationFunction);
   }
 })();

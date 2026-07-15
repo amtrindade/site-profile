@@ -157,47 +157,13 @@
                                             <option>Item 10</option>
                                         </select>
                     </div>
-                      
-                        <fieldset class="elements-fieldset" title="IframeTest">
-                        <div id="elementos">
-                            <h3 class="text-muted">IFrame:</h3>
-                        </div>
-                        <div id="iframes">
-                        <frameset title="frmset1">
-                            <table class="elements-table-full">
-                                <tbody>
-                                <tr>
-                                        <td>
-                                            <iframe name="iframe_a" scrolling="yes" src="http://www.umov.me"></iframe>
-                                        </td>
-                                        <td>
-                                            <iframe name="iframe_b" scrolling="yes" src="http://www.targettrust.com.br"></iframe>
-                                        </td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </frameset>
-                        <br />
-                        <frameset title="frmset2">
-                            <table class="elements-table-full">
-
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                          <iframe name="iframe_c" scrolling="yes" src="http://sahitest.com/demo/dragDropDataTransfer.htm"></iframe>  
-                                        </td>
-                                        <td>
-                                            <iframe name="iframe_d" scrolling="yes" src="https://www.selenium.dev/pt-br/"></iframe>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </frameset>
-                        </fieldset>
-                    
+                    <div id="elementos">
+                        <h3 class="text-muted">iFrame:</h3>
                     </div>
-					
+                    <div id="input" class="iframe-inline-block">
+                        <iframe id="frame1" src="./frame.html" style="border: 0px" height="30"></iframe>
+                    </div>
+
                     <div id="elementos">
                         <h3 class="text-muted">Utilizando POP UP:</h3>
                     </div>
@@ -222,10 +188,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        Simple Prompt Box Message
+                                        Simple Prompt Validation
                                     </td>
                                     <td>
-                                        <input name="promptbtn" type="button" value="Prompt" />
+                                        <input id="promptBtn" type="button" value="Prompt" />
                                     </td>
                                 </tr>
                             </tbody>
