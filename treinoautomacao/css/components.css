@@ -99,13 +99,6 @@ input[type="submit"] {
   margin-top: var(--space-2);
 }
 
-.home-footer {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-}
-
 @media (max-width: 900px) {
   .home-grid {
     grid-template-columns: 1fr;
