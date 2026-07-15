@@ -20,17 +20,7 @@
 </head>
 <body class="calc-page">
 	<div class="container">
-      <div class="masthead">
-        <h3 class="text-muted">Treinamento em Automação de Testes</h3>
-        <ul class="nav nav-justified">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
-          <li class="active"><a href="desafiosoma.html">Calculadora</a></li>
-          <li><a href="localizandovalorestable.html">Localizar Table</a></li>
-          <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
-          <li><a href="elementsweb.html">Web Elementos</a></li>
-        </ul>
-      </div>
+	  <div data-menu-slot data-active-page="desafiosoma"></div>
 		<main class="calc-card panel-soft" role="main">
 			<p class="calc-intro">Informe os valores e selecione uma das operações aritméticas:</p>
 			<div class="calc-grid">
@@ -61,6 +51,7 @@
         <!--<p>Treino Automação de Testes - TargetTrust Treinamento e Tecnologia - Porto Alegre/RS - 2016</p>-->
       </div>
 	</div>
+	<script src="js/core/menu-loader.js" defer></script>
 	<script src="js/pages/desafiosoma.js" defer></script>
 </body>
 </html>

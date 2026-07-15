@@ -23,7 +23,7 @@
       "id": "C0-T1",
       "phase": "C0",
       "title": "Inventariar menus duplicados",
-      "status": "not-started",
+      "status": "done",
       "description": "Mapear todas as paginas com menu hardcoded e registrar divergencias de links/estado ativo.",
       "dependsOn": [],
       "estimatedEffort": "S",
@@ -37,7 +37,7 @@
       "id": "C1-T1",
       "phase": "C1",
       "title": "Fechar decisao tecnica",
-      "status": "not-started",
+      "status": "done",
       "description": "Confirmar abordagem fragmento HTML compartilhado + loader JS unico.",
       "dependsOn": [
         "C0-T1"
@@ -53,7 +53,7 @@
       "id": "C2-T1",
       "phase": "C2",
       "title": "Criar fragmento oficial de menu",
-      "status": "not-started",
+      "status": "done",
       "description": "Criar partials/main-menu.html usando menu do index.html como baseline.",
       "dependsOn": [
         "C1-T1"
@@ -69,7 +69,7 @@
       "id": "C2-T2",
       "phase": "C2",
       "title": "Implementar loader compartilhado",
-      "status": "not-started",
+      "status": "done",
       "description": "Criar js/core/menu-loader.js para carregar fragmento, injetar menu e definir item ativo.",
       "dependsOn": [
         "C2-T1"
@@ -86,7 +86,7 @@
       "id": "C3-T1",
       "phase": "C3",
       "title": "Migrar index para slot",
-      "status": "not-started",
+      "status": "done",
       "description": "Substituir menu local do index por placeholder com data-active-page=index.",
       "dependsOn": [
         "C2-T2"
@@ -102,7 +102,7 @@
       "id": "C3-T2",
       "phase": "C3",
       "title": "Migrar demais paginas para slot",
-      "status": "not-started",
+      "status": "done",
       "description": "Remover menus duplicados nas paginas de treino e adotar placeholder padrao + loader.",
       "dependsOn": [
         "C3-T1"
@@ -118,7 +118,7 @@
       "id": "C3-T3",
       "phase": "C3",
       "title": "Ajustar responsividade do menu sem corte",
-      "status": "not-started",
+      "status": "done",
       "description": "Revisar e ajustar CSS do menu para garantir texto integral dos links em telas menores, sem ocultacao por altura/overflow.",
       "dependsOn": [
         "C3-T2"
@@ -135,7 +135,7 @@
       "id": "C4-T1",
       "phase": "C4",
       "title": "Executar regressao funcional de navegacao",
-      "status": "not-started",
+      "status": "done",
       "description": "Validar links, estado ativo, acessibilidade e responsividade em desktop/mobile.",
       "dependsOn": [
         "C3-T2",
@@ -154,7 +154,7 @@
       "id": "C5-T1",
       "phase": "C5",
       "title": "Documentar manutencao do menu",
-      "status": "not-started",
+      "status": "done",
       "description": "Atualizar docs de manutencao com regra de single source e procedimento para novos itens de menu.",
       "dependsOn": [
         "C4-T1"
@@ -170,7 +170,7 @@
       "id": "C6-T1",
       "phase": "C6",
       "title": "Fechar ciclo e atualizar board",
-      "status": "not-started",
+      "status": "done",
       "description": "Atualizar status final no board e registrar evidencias de validacao do ciclo.",
       "dependsOn": [
         "C5-T1"

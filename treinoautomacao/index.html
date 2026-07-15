@@ -35,18 +35,7 @@
 
   <body>
     <div class="container home-shell">
-      <header class="masthead" role="banner">
-        <h3 class="text-muted">Treinamento em Automação de Testes</h3>
-        <ul class="nav nav-justified">
-          <li class="active"><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
-          <li><a href="desafiosoma.html">Calculadora</a></li>
-          <li><a href="localizandovalorestable.html">Localizar Table</a></li>
-          <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
-          <li><a href="elementsweb.html">Web Elementos</a></li>
-          <li><a href="geradorcpf.html">Gerador CPF</a></li>
-        </ul>
-      </header>
+      <div data-menu-slot data-active-page="index"></div>
 
       <main class="home-main" role="main">
         <section class="home-hero panel-soft" aria-labelledby="home-title">
@@ -87,5 +76,6 @@
 
       <footer class="footer home-footer" role="contentinfo"></footer>
     </div>
+    <script src="js/core/menu-loader.js" defer></script>
   </body>
 </html>
