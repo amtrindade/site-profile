@@ -3,16 +3,85 @@
   margin: 0 auto;
 }
 
+.elements-page form {
+  display: grid;
+  gap: var(--space-4);
+}
+
 .elements-page #elementos {
   margin-top: var(--space-5);
+  height: auto;
+  padding-left: 0;
+  clear: both;
 }
 
 .elements-page .elements-table {
-  width: auto;
+  width: 100%;
 }
 
 .elements-page .elements-table-full {
   width: 100%;
+}
+
+.elements-page #input,
+.elements-page #box,
+.elements-page #list {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+  clear: both;
+}
+
+.elements-page .elements-textfields {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.elements-page .elements-textfields .elements-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 var(--space-3);
+}
+
+.elements-page .elements-textfields .elements-table tr {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.elements-page .elements-textfields .elements-table td:first-child {
+  width: auto;
+  padding-right: var(--space-3);
+}
+
+.elements-page .elements-textfields .elements-table td {
+  min-width: 0;
+  padding-bottom: 0;
+}
+
+.elements-page #list {
+  max-width: 100%;
+}
+
+.elements-page .elements-table td {
+  padding: 0 0 var(--space-2);
+  vertical-align: top;
+}
+
+.elements-page .elements-table td:first-child {
+  white-space: normal;
+  padding-right: var(--space-3);
+}
+
+.elements-page input[type="text"],
+.elements-page select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .elements-page .elements-fieldset {
@@ -40,4 +109,46 @@
   max-width: 100%;
   display: block;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .elements-page .panel-soft {
+    padding: var(--space-4);
+  }
+
+  .elements-page #elementos {
+    margin-top: var(--space-4);
+  }
+
+  .elements-page .elements-textfields {
+    margin-bottom: var(--space-5);
+  }
+
+  .elements-page .elements-textfields .elements-table,
+  .elements-page .elements-textfields .elements-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .elements-page .elements-textfields .elements-table tr {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+    width: 100%;
+  }
+
+  .elements-page .elements-textfields .elements-table td {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .elements-page .elements-textfields .elements-table tr + tr {
+    margin-top: var(--space-3);
+  }
+
+  .elements-page .elements-textfields .elements-table td:first-child {
+    width: 100%;
+    margin-bottom: var(--space-1);
+  }
 }

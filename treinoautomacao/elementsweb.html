@@ -29,15 +29,15 @@
             <div id="elementos">
                                 <h3 class="text-muted">Elementos TextField:</h3>
             </div>
-                    <div id="input">
+                    <div id="input" class="elements-textfields">
                                                 <table class="elements-table" border="0">
                             <tr>    
-                                    <td>TextField Enable:</td>
-                                    <td><input name="txtbox1" type="text" size='50px' placeholder="Digite o seu nome" /></td>
+                                                        <td><label for="txtbox1">TextField Enable:</label></td>
+                                                        <td><input id="txtbox1" name="txtbox1" type="text" placeholder="Digite o seu nome" /></td>
                             </tr>
                             <tr>
-                                    <td>TextField Disable:</td>
-                                    <td><input disabled="disabled" name="txtbox2" size='50px' type="text" value="" /></td>
+                                                        <td><label for="txtbox2">TextField Disable:</label></td>
+                                                        <td><input id="txtbox2" disabled="disabled" name="txtbox2" type="text" value="" /></td>
                             </tr>
                         </table>
         </div>
@@ -49,34 +49,34 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input name="radioGroup1" type="radio" value="Radio Button 1 selecionado" />
+                                        <input id="radioGroup1-option1" name="radioGroup1" type="radio" value="Radio Button 1 selecionado" />
                                     </td>
                                     <td>
-                                        Radio Button 1
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input name="radioGroup1" type="radio" value="Radio Button 2 selecionado" />
-                                    </td>
-                                    <td>
-                                        Radio Button 2
+                                        <label for="radioGroup1-option1">Radio Button 1</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input name="radioGroup1" type="radio" value="Radio Button 3 selecionado" />  
+                                        <input id="radioGroup1-option2" name="radioGroup1" type="radio" value="Radio Button 2 selecionado" />
                                     </td>
                                     <td>
-                                        Radio Button 3
+                                        <label for="radioGroup1-option2">Radio Button 2</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input name="radioGroup1" type="radio" value="Radio Button 4 selecionado" />
+                                        <input id="radioGroup1-option3" name="radioGroup1" type="radio" value="Radio Button 3 selecionado" />  
                                     </td>
                                     <td>
-                                        Radio Button 4
+                                        <label for="radioGroup1-option3">Radio Button 3</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="radioGroup1-option4" name="radioGroup1" type="radio" value="Radio Button 4 selecionado" />
+                                    </td>
+                                    <td>
+                                        <label for="radioGroup1-option4">Radio Button 4</label>
                                     </td>
                                 </tr>
                         </tbody>
@@ -90,34 +90,34 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input name="chkbox" type="checkbox" value="Check Box 1 selecionado" />
+                                        <input id="chkbox-option1" name="chkbox" type="checkbox" value="Check Box 1 selecionado" />
                                     </td>
                                     <td>
-                                        Check Box 1 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input name="chkbox" type="checkbox" value="Check Box 2 selecionado" />
-                                    </td>
-                                    <td>
-                                        Check Box 2 
+                                        <label for="chkbox-option1">Check Box 1</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input name="chkbox" type="checkbox" value="Check Box 3 selecionado" />
+                                        <input id="chkbox-option2" name="chkbox" type="checkbox" value="Check Box 2 selecionado" />
                                     </td>
                                     <td>
-                                        Check Box 3 
+                                        <label for="chkbox-option2">Check Box 2</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input name="chkbox" type="checkbox" value="Check Box 4 selecionado" />
+                                        <input id="chkbox-option3" name="chkbox" type="checkbox" value="Check Box 3 selecionado" />
                                     </td>
                                     <td>
-                                        Check Box 4 
+                                        <label for="chkbox-option3">Check Box 3</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="chkbox-option4" name="chkbox" type="checkbox" value="Check Box 4 selecionado" />
+                                    </td>
+                                    <td>
+                                        <label for="chkbox-option4">Check Box 4</label>
                                     </td>
                                 </tr>
                             </tbody>
@@ -127,7 +127,8 @@
                         <h3 class="text-muted">DropDown List Single:</h3>
                     </div>
                     <div id="list">
-                                        <select name="dropdownlist" size="6">
+                                        <label class="sr-only" for="dropdownlist-single">DropDown List Single</label>
+                                        <select id="dropdownlist-single" name="dropdownlist" size="6">
                                             <option>Item 1</option>
                                             <option>Item 2</option>
                                             <option>Item 3</option>
@@ -144,7 +145,8 @@
                         <h3 class="text-muted">Drop Down List Multi Selected:</h3>
                     </div>
                     <div id="list">
-                                        <select multiple="multiple" name="multiselectdropdown" size="6">
+                                        <label class="sr-only" for="multiselectdropdown-list">Drop Down List Multi Selected</label>
+                                        <select id="multiselectdropdown-list" multiple="multiple" name="multiselectdropdown" size="6">
                                             <option>Item 1</option>
                                             <option>Item 2</option>
                                             <option>Item 3</option>
