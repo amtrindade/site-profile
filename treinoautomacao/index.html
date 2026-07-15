@@ -35,18 +35,7 @@
 
   <body>
     <div class="container home-shell">
-      <header class="masthead" role="banner">
-        <h3 class="text-muted">Treinamento em Automação de Testes</h3>
-        <ul class="nav nav-justified">
-          <li class="active"><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="alertsconfirmation.html">Alerts and Confirmations</a></li>
-          <li><a href="desafiosoma.html">Calculadora</a></li>
-          <li><a href="localizandovalorestable.html">Localizar Table</a></li>
-          <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
-          <li><a href="elementsweb.html">Web Elementos</a></li>
-          <li><a href="geradorcpf.html">Gerador CPF</a></li>
-        </ul>
-      </header>
+      <div data-menu-slot data-active-page="index"></div>
 
       <main class="home-main" role="main">
         <section class="home-hero panel-soft" aria-labelledby="home-title">
@@ -54,8 +43,8 @@
           <h1 class="home-title" id="home-title">Treino de automação com cenários reais para prática diária</h1>
           <p class="home-subtitle">Use esta página como ponto de partida para validar seletores, interações e fluxos em exercícios funcionais.</p>
           <div class="actions-row">
-            <a class="btn btn-success btn-lg" href="desafiosoma.html" role="button">Ir para Calculadora</a>
-            <a class="btn btn-primary btn-lg" href="geradorcpf.html" role="button">Abrir Gerador CPF</a>
+            <a class="btn btn-success btn-lg" href="desafiosoma.html" role="button">Calculadora</a>
+            <a class="btn btn-primary btn-lg" href="geradorcpf.html" role="button">Gerador de CPF</a>
             <a class="btn btn-default btn-lg" href="mailto:amtrindade@gmail.com" role="button">Enviar e-mail</a>
           </div>
         </section>
@@ -69,17 +58,18 @@
               <li><a href="localizandovalorestable.html">Localizar Table</a></li>
               <li><a href="utilizandoxpath.html">Localizando por Xpath</a></li>
               <li><a href="elementsweb.html">Web Elementos</a></li>
+              <li><a href="geradorcpf.html">Gerador de CPF</a></li>
             </ul>
           </article>
 
           <article class="panel-soft">
             <h2 class="section-title">Links de apoio</h2>
             <ul class="home-list">
-              <li><a href="http://goo.gl/DNVUR" target="_blank" rel="noopener noreferrer">Formulário de Cadastro</a></li>
-              <li><a href="https://www.geradordecpf.org/" target="_blank" rel="noopener noreferrer">Gerador de CPF</a></li>
               <li><a href="http://www.sahi.co.in/demo/dragDropMooTools.htm" target="_blank" rel="noopener noreferrer">Drag and Drop</a></li>
               <li><a href="http://jqueryui.com/resources/demos/droppable/default.html" target="_blank" rel="noopener noreferrer">Drag and Drop JQuery</a></li>
               <li><a href="http://www.sahi.co.in/demo/training/login.htm" target="_blank" rel="noopener noreferrer">Book Store</a></li>
+              <li><a href="https://tools.lymas.com.br/regexp_br.php" target="_blank" rel="noopener noreferrer">Validador de Expressões Regulares</a></li>
+              <li><a href="https://www.cheat-sheets.org/saved-copy/Locators_table_1_0_2.pdf" target="_blank" rel="noopener noreferrer">Rosetta Stone</a></li>
             </ul>
           </article>
         </section>
@@ -87,5 +77,6 @@
 
       <footer class="footer home-footer" role="contentinfo"></footer>
     </div>
+    <script src="js/core/menu-loader.js" defer></script>
   </body>
 </html>

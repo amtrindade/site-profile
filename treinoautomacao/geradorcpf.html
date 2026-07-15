@@ -18,18 +18,7 @@
 
   <body>
     <div class="container" id="appContainer">
-      <div class="masthead" id="pageHeader">
-        <h3 class="text-muted" id="headerTitle">Treinamento em Automacao de Testes</h3>
-        <ul class="nav nav-justified" id="mainNavigation">
-          <li id="navItemHome"><a id="navHome" href="index.html">Home</a></li>
-          <li id="navItemAlerts"><a id="navAlerts" href="alertsconfirmation.html">Alerts and Confirmations</a></li>
-          <li id="navItemCalculadora"><a id="navCalculadora" href="desafiosoma.html">Calculadora</a></li>
-          <li id="navItemTabela"><a id="navTabela" href="localizandovalorestable.html">Localizar Table</a></li>
-          <li id="navItemXpath"><a id="navXpath" href="utilizandoxpath.html">Localizando por Xpath</a></li>
-          <li id="navItemWebElementos"><a id="navWebElementos" href="elementsweb.html">Web Elementos</a></li>
-          <li class="active" id="navItemGeradorCpf"><a id="navGeradorCpf" href="geradorcpf.html">Gerador CPF</a></li>
-        </ul>
-      </div>
+      <div data-menu-slot data-active-page="geradorcpf"></div>
 
       <div class="cpf-panel text-center" id="cpfPanel">
         <h1 id="pageTitle">Gerador e Validador de CPF</h1>
@@ -57,6 +46,7 @@
       <div class="footer" id="pageFooter"></div>
     </div>
 
+    <script src="js/core/menu-loader.js" defer></script>
     <script src="js/pages/gerador-cpf.js" defer></script>
   </body>
 </html>
