@@ -1,0 +1,220 @@
+{
+  "feature": "refactor-menu-single-source-of-truth",
+  "project": "treinoautomacao",
+  "canonicalCycle": "C0-C6",
+  "summary": "Eliminar duplicacao de menu entre paginas HTML, adotando menu compartilhado com baseline do index.html.",
+  "constraints": [
+    "Projeto deve permanecer 100% estatico",
+    "Sem bundler, transpiler ou pipeline de build",
+    "Preservar compatibilidade visual com Bootstrap/estilos atuais",
+    "Preservar navegacao existente",
+    "Nao cortar/ocultar texto de links do menu em viewport reduzido"
+  ],
+  "deliverables": [
+    "partials/main-menu.html",
+    "js/core/menu-loader.js",
+    "Paginas HTML migradas para placeholder de menu",
+    "CSS responsivo de menu ajustado para links longos sem corte",
+    "Checklist de regressao atualizado",
+    "Guia de manutencao atualizado"
+  ],
+  "tasks": [
+    {
+      "id": "C0-T1",
+      "phase": "C0",
+      "title": "Inventariar menus duplicados",
+      "status": "not-started",
+      "description": "Mapear todas as paginas com menu hardcoded e registrar divergencias de links/estado ativo.",
+      "dependsOn": [],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Lista de paginas com menu local registrada",
+        "Divergencias entre menus documentadas"
+      ]
+    },
+    {
+      "id": "C1-T1",
+      "phase": "C1",
+      "title": "Fechar decisao tecnica",
+      "status": "not-started",
+      "description": "Confirmar abordagem fragmento HTML compartilhado + loader JS unico.",
+      "dependsOn": [
+        "C0-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Decisao tecnica aprovada no plan.md",
+        "Contrato de data-active-page definido"
+      ]
+    },
+    {
+      "id": "C2-T1",
+      "phase": "C2",
+      "title": "Criar fragmento oficial de menu",
+      "status": "not-started",
+      "description": "Criar partials/main-menu.html usando menu do index.html como baseline.",
+      "dependsOn": [
+        "C1-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Arquivo partials/main-menu.html criado",
+        "Todos os links principais presentes"
+      ]
+    },
+    {
+      "id": "C2-T2",
+      "phase": "C2",
+      "title": "Implementar loader compartilhado",
+      "status": "not-started",
+      "description": "Criar js/core/menu-loader.js para carregar fragmento, injetar menu e definir item ativo.",
+      "dependsOn": [
+        "C2-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Menu carregado via fetch",
+        "Item ativo definido por data-active-page",
+        "aria-current aplicado corretamente"
+      ]
+    },
+    {
+      "id": "C3-T1",
+      "phase": "C3",
+      "title": "Migrar index para slot",
+      "status": "not-started",
+      "description": "Substituir menu local do index por placeholder com data-active-page=index.",
+      "dependsOn": [
+        "C2-T2"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Index usa menu compartilhado",
+        "Visual da home preservado"
+      ]
+    },
+    {
+      "id": "C3-T2",
+      "phase": "C3",
+      "title": "Migrar demais paginas para slot",
+      "status": "not-started",
+      "description": "Remover menus duplicados nas paginas de treino e adotar placeholder padrao + loader.",
+      "dependsOn": [
+        "C3-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Nenhuma pagina principal com menu hardcoded",
+        "Todas as paginas com menu unificado"
+      ]
+    },
+    {
+      "id": "C3-T3",
+      "phase": "C3",
+      "title": "Ajustar responsividade do menu sem corte",
+      "status": "not-started",
+      "description": "Revisar e ajustar CSS do menu para garantir texto integral dos links em telas menores, sem ocultacao por altura/overflow.",
+      "dependsOn": [
+        "C3-T2"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Nenhum link de menu com texto cortado/oculto em viewport reduzido",
+        "Quebra de linha permitida sem perda de legibilidade",
+        "Links longos validados (Alerts and Confirmations, Localizando por Xpath)"
+      ]
+    },
+    {
+      "id": "C4-T1",
+      "phase": "C4",
+      "title": "Executar regressao funcional de navegacao",
+      "status": "not-started",
+      "description": "Validar links, estado ativo, acessibilidade e responsividade em desktop/mobile.",
+      "dependsOn": [
+        "C3-T2",
+        "C3-T3"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Todos os links de menu navegando corretamente",
+        "Estado ativo correto em cada pagina",
+        "Sem regressao visual critica",
+        "Sem corte de texto no menu em larguras menores"
+      ]
+    },
+    {
+      "id": "C5-T1",
+      "phase": "C5",
+      "title": "Documentar manutencao do menu",
+      "status": "not-started",
+      "description": "Atualizar docs de manutencao com regra de single source e procedimento para novos itens de menu.",
+      "dependsOn": [
+        "C4-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Procedimento de evolucao do menu documentado",
+        "Riscos e mitigacoes atualizados"
+      ]
+    },
+    {
+      "id": "C6-T1",
+      "phase": "C6",
+      "title": "Fechar ciclo e atualizar board",
+      "status": "not-started",
+      "description": "Atualizar status final no board e registrar evidencias de validacao do ciclo.",
+      "dependsOn": [
+        "C5-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Board com status final das tasks",
+        "Resumo de fechamento documentado"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "C0-T1",
+    "C1-T1",
+    "C2-T1",
+    "C2-T2",
+    "C3-T1",
+    "C3-T2",
+    "C3-T3",
+    "C4-T1",
+    "C5-T1",
+    "C6-T1"
+  ],
+  "keyRisks": [
+    {
+      "id": "R1",
+      "description": "fetch do fragmento pode falhar em abertura direta via file://",
+      "mitigation": "Padronizar uso de servidor estatico local e fallback de erro"
+    },
+    {
+      "id": "R2",
+      "description": "Perda de consistencia visual no masthead",
+      "mitigation": "Preservar classes atuais e validar desktop/mobile"
+    },
+    {
+      "id": "R3",
+      "description": "Estado ativo incorreto em paginas",
+      "mitigation": "Validar data-active-page e aplicar aria-current por regra unica"
+    },
+    {
+      "id": "R4",
+      "description": "Texto de links longos ficar oculto/cortado em viewport menor",
+      "mitigation": "Ajustar CSS responsivo (height/line-height/overflow/white-space) e validar em breakpoints"
+    }
+  ]
+}
