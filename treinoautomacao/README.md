@@ -100,3 +100,24 @@ Antes de concluir qualquer mudanca:
 - docs/checklist-regressao.md
 - docs/plan.md
 - docs/tasks.json
+
+## Padrao de Numeracao dos Ciclos em docs
+
+As novas implementacoes documentadas em docs devem seguir nomenclatura sequencial com 3 digitos no inicio da pasta.
+
+Formato obrigatorio:
+
+- docs/NNN-tema-canonical-cycle
+
+Regras:
+
+- O indice NNN comeca em 001 e segue em ordem crescente (002, 003, 004...).
+- Cada nova pasta usa o maior indice existente + 1.
+- A numeracao representa a ordem de criacao dos ciclos.
+
+Exemplos atuais:
+
+- docs/001-cpf
+- docs/002-menu-canonical-cycle
+- docs/003-menu-hamburger-retratil
+- docs/004-dark-mode-canonical-cycle

@@ -1,0 +1,253 @@
+{
+  "feature": "refactor-menu-hamburger-retratil",
+  "project": "treinoautomacao",
+  "canonicalCycle": "C0-C6",
+  "summary": "Substituir o menu superior atual por menu hamburger retratil mantendo as mesmas opcoes e rotas.",
+  "constraints": [
+    "Projeto deve permanecer 100% estatico",
+    "Sem bundler, transpiler ou pipeline de build",
+    "Manter as mesmas opcoes e rotas atuais de navegacao",
+    "Preservar acessibilidade basica por teclado e ARIA",
+    "Nao alterar regras de negocio das paginas"
+  ],
+  "deliverables": [
+    "Especificacao tecnica de menu hamburger retratil",
+    "Backlog executavel com dependencias e ordem de execucao",
+    "Criterios de aceite e riscos documentados"
+  ],
+  "tasks": [
+    {
+      "id": "C0-T1",
+      "phase": "C0",
+      "title": "Mapear estado atual do menu compartilhado",
+      "status": "todo",
+      "description": "Consolidar comportamento atual do main-menu e do menu-loader para evitar regressao de navegacao.",
+      "dependsOn": [],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Lista atual de links canonicos confirmada",
+        "Eventos/estados atuais relevantes registrados"
+      ]
+    },
+    {
+      "id": "C1-T1",
+      "phase": "C1",
+      "title": "Fechar contrato de UX e acessibilidade",
+      "status": "todo",
+      "description": "Definir comportamento de abertura/fechamento, foco e atributos ARIA do menu hamburger retratil.",
+      "dependsOn": [
+        "C0-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Contrato de estados aberto/fechado aprovado",
+        "Regras de ARIA e teclado definidas"
+      ]
+    },
+    {
+      "id": "C2-T1",
+      "phase": "C2",
+      "title": "Desenhar estrutura base do menu retratil",
+      "status": "todo",
+      "description": "Definir markup alvo para cabecalho, botao hamburger, drawer e overlay usando o fragmento compartilhado.",
+      "dependsOn": [
+        "C1-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Estrutura HTML alvo documentada",
+        "Lista de classes/atributos obrigatorios definida"
+      ]
+    },
+    {
+      "id": "C2-T2",
+      "phase": "C2",
+      "title": "Definir estrategia de CSS do drawer",
+      "status": "todo",
+      "description": "Planejar estilos de layout, responsividade e animacao para o menu retratil, incluindo compatibilidade com estilos legados.",
+      "dependsOn": [
+        "C2-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Breakpoints e comportamento responsivo definidos",
+        "Sem dependencia critica de nav-justified para o novo menu"
+      ]
+    },
+    {
+      "id": "C2-T3",
+      "phase": "C2",
+      "title": "Definir estrategia de JS para controle do menu",
+      "status": "todo",
+      "description": "Planejar evolucao do menu-loader para toggle, sincronizacao ARIA, fechamento por Esc/overlay/item e manutencao do item ativo.",
+      "dependsOn": [
+        "C2-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Fluxo de eventos e estado documentado",
+        "Preservacao de aria-current prevista explicitamente"
+      ]
+    },
+    {
+      "id": "C3-T1",
+      "phase": "C3",
+      "title": "Migrar menu compartilhado para padrao hamburger",
+      "status": "todo",
+      "description": "Executar refactor do fragmento de menu para o novo padrao sem alterar a lista canonica de links.",
+      "dependsOn": [
+        "C2-T2",
+        "C2-T3"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Drawer apresenta as 7 opcoes atuais",
+        "Rotas permanecem inalteradas"
+      ]
+    },
+    {
+      "id": "C3-T2",
+      "phase": "C3",
+      "title": "Adequar estilos globais e legado",
+      "status": "todo",
+      "description": "Ajustar regras globais para suportar o novo padrao retratil e reduzir conflitos com estilos antigos.",
+      "dependsOn": [
+        "C3-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Cabecalho novo funcional em mobile e desktop",
+        "Sem corte de texto nos links do menu"
+      ]
+    },
+    {
+      "id": "C3-T3",
+      "phase": "C3",
+      "title": "Atualizar comportamento do loader",
+      "status": "todo",
+      "description": "Implementar controle completo de abertura/fechamento no loader mantendo item ativo por pagina.",
+      "dependsOn": [
+        "C3-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Fechamento por botao, overlay, Esc e clique em item funcionando",
+        "aria-expanded e aria-current sincronizados corretamente"
+      ]
+    },
+    {
+      "id": "C4-T1",
+      "phase": "C4",
+      "title": "Executar validacao funcional e de acessibilidade",
+      "status": "todo",
+      "description": "Validar navegacao, item ativo, teclado e comportamento do drawer nos breakpoints principais.",
+      "dependsOn": [
+        "C3-T2",
+        "C3-T3"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Todas as paginas navegam corretamente",
+        "Checklist de teclado e ARIA sem falhas criticas"
+      ]
+    },
+    {
+      "id": "C4-T2",
+      "phase": "C4",
+      "title": "Executar regressao visual orientada",
+      "status": "todo",
+      "description": "Comparar comportamento visual entre desktop e mobile para detectar sobreposicao, corte e inconsistencias.",
+      "dependsOn": [
+        "C4-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Sem regressao visual critica no cabecalho",
+        "Menu retratil legivel e clicavel em viewport reduzido"
+      ]
+    },
+    {
+      "id": "C5-T1",
+      "phase": "C5",
+      "title": "Harden e fallback operacional",
+      "status": "todo",
+      "description": "Documentar ajustes de resiliencia (ex.: falha de carregamento, fallback, mensagens) e padroes de manutencao.",
+      "dependsOn": [
+        "C4-T2"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Riscos residuais e mitigacoes revisados",
+        "Regras de manutencao do menu atualizadas"
+      ]
+    },
+    {
+      "id": "C6-T1",
+      "phase": "C6",
+      "title": "Fechamento do ciclo",
+      "status": "todo",
+      "description": "Concluir o ciclo com status final das tasks, evidencia de validacao e resumo tecnico.",
+      "dependsOn": [
+        "C5-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Ordem de execucao concluida",
+        "Resumo final do ciclo registrado"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "C0-T1",
+    "C1-T1",
+    "C2-T1",
+    "C2-T2",
+    "C2-T3",
+    "C3-T1",
+    "C3-T2",
+    "C3-T3",
+    "C4-T1",
+    "C4-T2",
+    "C5-T1",
+    "C6-T1"
+  ],
+  "keyRisks": [
+    {
+      "id": "R1",
+      "description": "Regressao de navegacao por alteracao estrutural do menu",
+      "mitigation": "Preservar lista canonica de links e validar rota por rota"
+    },
+    {
+      "id": "R2",
+      "description": "Quebra de acessibilidade no controle do drawer",
+      "mitigation": "Checklist de ARIA, teclado e foco em todos os cenarios de abertura/fechamento"
+    },
+    {
+      "id": "R3",
+      "description": "Conflito entre CSS legado e novo padrao retratil",
+      "mitigation": "Isolar classes do menu novo e revisar regras antigas por prioridade"
+    },
+    {
+      "id": "R4",
+      "description": "Estado visual inconsistente entre mobile e desktop",
+      "mitigation": "Validar breakpoints principais com regressao visual guiada"
+    },
+    {
+      "id": "R5",
+      "description": "Perda de sincronia de estado ativo por pagina",
+      "mitigation": "Manter data-route e aria-current com logica centralizada no loader"
+    }
+  ]
+}

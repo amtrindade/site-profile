@@ -1,0 +1,272 @@
+{
+  "feature": "implementacao-dark-mode-manual",
+  "project": "treinoautomacao",
+  "canonicalCycle": "C0-C6",
+  "summary": "Adicionar dark mode com toggle manual por icone no menu compartilhado, persistencia local e validacao de regressao.",
+  "constraints": [
+    "Projeto deve permanecer 100% estatico",
+    "Sem bundler, transpiler ou pipeline de build",
+    "Manter rotas e comportamento atual de navegacao",
+    "Nao incluir modo seguir sistema neste ciclo",
+    "Preservar compatibilidade com estrutura atual de HTML/CSS/JS"
+  ],
+  "deliverables": [
+    "Especificacao tecnica de dark mode",
+    "Backlog executavel com dependencias",
+    "Criterios de aceite, riscos e mitigacoes documentados"
+  ],
+  "tasks": [
+    {
+      "id": "C0-T1",
+      "phase": "C0",
+      "title": "Mapear pontos de cor hardcoded",
+      "status": "todo",
+      "description": "Inventariar regras com cores literais nas camadas globais e paginas criticas para orientar a migracao para tokens.",
+      "dependsOn": [],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Lista de arquivos e seletores de alto impacto registrada",
+        "Escopo de migracao de cores priorizado"
+      ]
+    },
+    {
+      "id": "C1-T1",
+      "phase": "C1",
+      "title": "Fechar contrato funcional do toggle",
+      "status": "todo",
+      "description": "Consolidar comportamento aprovado: claro/escuro manual por icone, sem seguir sistema.",
+      "dependsOn": [
+        "C0-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Estados do controle de tema definidos",
+        "Contrato de persistencia e fallback documentado"
+      ]
+    },
+    {
+      "id": "C2-T1",
+      "phase": "C2",
+      "title": "Definir tokens de tema global",
+      "status": "todo",
+      "description": "Preparar modelo de variaveis semanticas para claro/escuro em base global.",
+      "dependsOn": [
+        "C1-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Mapa de tokens claro/escuro definido",
+        "Camadas que consomem tokens identificadas"
+      ]
+    },
+    {
+      "id": "C2-T2",
+      "phase": "C2",
+      "title": "Definir estrategia anti-flicker",
+      "status": "todo",
+      "description": "Planejar aplicacao antecipada do tema para reduzir flash de tema incorreto.",
+      "dependsOn": [
+        "C1-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Fluxo de inicializacao do tema definido",
+        "Fallback seguro para indisponibilidade de storage previsto"
+      ]
+    },
+    {
+      "id": "C2-T3",
+      "phase": "C2",
+      "title": "Definir modulo JS de tema",
+      "status": "todo",
+      "description": "Planejar criacao do theme-manager e integracao com o carregador de menu compartilhado.",
+      "dependsOn": [
+        "C1-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "API minima do modulo de tema definida",
+        "Ponto de integracao com menu-loader validado"
+      ]
+    },
+    {
+      "id": "C3-T1",
+      "phase": "C3",
+      "title": "Migrar menu compartilhado com icone",
+      "status": "todo",
+      "description": "Adicionar botao lua/sol ao fragmento de menu sem alterar lista canonica de links.",
+      "dependsOn": [
+        "C2-T3"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Controle de tema presente no menu compartilhado",
+        "Links e data-route preservados"
+      ]
+    },
+    {
+      "id": "C3-T2",
+      "phase": "C3",
+      "title": "Implementar persistencia e alternancia",
+      "status": "todo",
+      "description": "Implementar leitura, escrita e aplicacao de tema com localStorage e fallback.",
+      "dependsOn": [
+        "C2-T2",
+        "C2-T3"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Alto",
+      "acceptanceCriteria": [
+        "Tema alterna corretamente ao clicar no icone",
+        "Tema selecionado persiste apos recarregar"
+      ]
+    },
+    {
+      "id": "C3-T3",
+      "phase": "C3",
+      "title": "Migrar CSS global para tokens",
+      "status": "todo",
+      "description": "Adaptar base/layout/components para herdar tema claro/escuro por variaveis.",
+      "dependsOn": [
+        "C2-T1"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Elementos globais respondem aos dois temas",
+        "Estados de hover/focus permanecem legiveis"
+      ]
+    },
+    {
+      "id": "C3-T4",
+      "phase": "C3",
+      "title": "Tratar paginas e legado prioritario",
+      "status": "todo",
+      "description": "Ajustar arquivos com maior incidencia de cor literal para evitar contraste inconsistente.",
+      "dependsOn": [
+        "C3-T3"
+      ],
+      "estimatedEffort": "M",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "gerador-cpf e navegação legada com contraste adequado",
+        "Sem quebra visual critica nas paginas principais"
+      ]
+    },
+    {
+      "id": "C4-T1",
+      "phase": "C4",
+      "title": "Validar regressao funcional completa",
+      "status": "todo",
+      "description": "Executar checklist de navegacao, rotas, estado ativo de menu e alternancia em todas as paginas.",
+      "dependsOn": [
+        "C3-T1",
+        "C3-T2",
+        "C3-T4"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Navegacao sem regressao funcional",
+        "Estado ativo e comportamento de tema corretos"
+      ]
+    },
+    {
+      "id": "C4-T2",
+      "phase": "C4",
+      "title": "Validar acessibilidade e contraste",
+      "status": "todo",
+      "description": "Revisar foco visivel, teclado e contraste textual/interativo em claro e escuro.",
+      "dependsOn": [
+        "C3-T4"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Medio",
+      "acceptanceCriteria": [
+        "Controle de tema acessivel por teclado",
+        "Sem falhas criticas de contraste nas telas principais"
+      ]
+    },
+    {
+      "id": "C5-T1",
+      "phase": "C5",
+      "title": "Harden de conflitos residuais",
+      "status": "todo",
+      "description": "Refinar conflitos entre estilos novos e legados e estabilizar comportamento cross-page.",
+      "dependsOn": [
+        "C4-T1",
+        "C4-T2"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Conflitos de estilo remanescentes mitigados",
+        "Comportamento final consistente no site"
+      ]
+    },
+    {
+      "id": "C6-T1",
+      "phase": "C6",
+      "title": "Encerrar ciclo e registrar evidencias",
+      "status": "todo",
+      "description": "Consolidar status final das tasks, evidencias de validacao e resumo do ciclo.",
+      "dependsOn": [
+        "C5-T1"
+      ],
+      "estimatedEffort": "S",
+      "risk": "Baixo",
+      "acceptanceCriteria": [
+        "Ciclo encerrado com ordem de execucao concluida",
+        "Resumo tecnico de fechamento registrado"
+      ]
+    }
+  ],
+  "executionOrder": [
+    "C0-T1",
+    "C1-T1",
+    "C2-T1",
+    "C2-T2",
+    "C2-T3",
+    "C3-T1",
+    "C3-T2",
+    "C3-T3",
+    "C3-T4",
+    "C4-T1",
+    "C4-T2",
+    "C5-T1",
+    "C6-T1"
+  ],
+  "keyRisks": [
+    {
+      "id": "R1",
+      "description": "Flash inicial de tema incorreto durante carregamento",
+      "mitigation": "Aplicar tema cedo na inicializacao e validar hard refresh"
+    },
+    {
+      "id": "R2",
+      "description": "Conflito entre tokens novos e CSS legado com cores fixas",
+      "mitigation": "Migracao por camadas com validacao por pagina"
+    },
+    {
+      "id": "R3",
+      "description": "Regressao de navegacao no menu compartilhado",
+      "mitigation": "Preservar estrutura de links e logica de rota ativa"
+    },
+    {
+      "id": "R4",
+      "description": "Contraste insuficiente em componentes especificos",
+      "mitigation": "Checklist de contraste em claro/escuro nas telas principais"
+    },
+    {
+      "id": "R5",
+      "description": "Storage indisponivel em ambiente restrito",
+      "mitigation": "Fallback para tema padrao com degradacao graciosa"
+    }
+  ]
+}

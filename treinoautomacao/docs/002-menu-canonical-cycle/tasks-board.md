@@ -1,6 +1,6 @@
 # Board Visual de Tasks - Refactor de Menu (Canonical Cycle)
 
-Fonte: docs/proxima-implementacao-menu-canonical-cycle/tasks.json
+Fonte: docs/002-menu-canonical-cycle/tasks.json
 Projeto: treinoautomacao
 Ciclo: C0-C6
 Modo: static-only (sem build)
